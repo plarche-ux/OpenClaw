@@ -1,0 +1,182 @@
+# The Divided Brain – Agent Optimized Index
+
+This index mirrors the agent-optimized master file.
+Use chapter retrieval keys to focus OpenClaw queries.
+
+## Chapters
+
+
+## Major Sections & Subsections
+
+- A Word of Clarity: This Isn\'t Brain Surgery (Literally!)
+- Imagine Your Mind as a Set of Two Interlocked Gears
+- Exploring Brain Models
+- 1. The Triune Brain Model
+- 2. Thinking Fast and Slow: System 1 and System 2
+- 3. The Rider and the Elephant Metaphor
+- The Brain\'s Evolutionary Journey
+- Our Superpower: Lots of Neurons
+- Fast and Slow
+- Remember This
+- The Old Brain Seizes, the New Brain Explains
+- Shifting Gears: Automatic vs. Manual Thinking
+- Applying The Divided Brain
+- Wrapping It Up
+- Characteristics of the Larger Gear
+- Learned Experiences and Intuition
+- Real-World Experiences
+- Cognitive Heuristics
+- Intuition
+- Decisions are made in the Old Brain First
+- Branding Strategies: Aligning with the Old Brain\'s Momentum
+- Simplicity
+- Needs Immediate Gratification
+- Resistant to Change
+- It's Selfish
+- Wants to be Part of a Tribe
+- Wants Fairness
+- Dislikes too Much Choice
+- Craves the Familiar
+- Likes Novelty in Small Doses
+- Needs Context
+- Needs Resolution
+- It's Vain
+- It's Thin-Skinned
+- Characteristics of the Smaller Gear
+- The New Kid on the Block
+- New Brain Can't Multitask
+- Special Pleading
+- Metacognition: The New Brain's Super Power
+- How to Engage Metacognition in Branding
+- Default Automatic Transmission
+- Inference: Old Brain Fill-in-the-Blanks
+- Pattern Recognition and Patternicity
+- Agency: From Pattern to Purpose
+- Why We Struggle with Math and Probabilities
+- New Brain Confabulation
+- Confabulation in Marketing and Branding
+- Cognitive Biases
+- Confirmation Bias
+- Anchoring Bias
+- Decoy Effect
+- Commitment Bias
+- Sunk Cost Bias
+- Scarcity Bias
+- Social Proof Bias
+- MySide Bias
+- Authority Bias
+- Loss Aversion Bias
+- Halo Effect Bias
+- Hindsight Bias
+- Hyperactive Agency Detection (HAAD)
+- Amazon is a Master of Bias Marketing
+- Logical Fallacies
+- False Cause Fallacy
+- Fundamental Attribution Error
+- Red Herring Fallacy
+- Bandwagon Fallacy
+- Straw Man Fallacy
+- Slippery Slope Fallacy
+- Appeal to Emotion Fallacy
+- False Dilemma Fallacy
+- Guilt by Association Fallacy
+- Cognitive Dissonance
+- Victimhood Reconsidered
+- Why All This Matters in Branding
+- What is Critical Thinking
+- Pseudoscience and the Paranormal: The Need to Believe
+- Belief vs. Skepticism
+- A Litmus Test for Critical Thinkers
+- Occam's Razor: A Critical Thinking Power Tool
+- A Step-by-Step Guide to Critical Thinking
+- The Power of Emotions
+- Key Neurotransmitters & Hormones
+- Dopamine: The Anticipation Neurotransmitter
+- Serotonin: The Mood Stabilizer
+- Oxytocin: The Trust Hormone
+- Endorphins: The Bodyʼs Natural Painkillers
+- Testosterone: The Competitive Drive Hormone
+- Adrenaline & Cortisol: The Stress Duo
+- Wrapping it Up
+- The Heart
+- Love and Belonging
+- Altruism
+- Empathy: The Emotional Bridge Between Gears
+- Reciprocity
+- Positive Morals & Values
+- Aspirations
+- Turning Negative Emotions into Positive Emotions
+- Low Self-Esteem: Rewiring the Internal Dialogue
+- Sadness: A Signal to Shift Gears
+- Loneliness: The Old Brain's Social Alarm
+- Why Turning Negative Emotions Around Matters for Brands
+- The Gut
+- Scarcity
+- Gathering and Hoarding
+- Overabundance in the Modern World
+- The Hedonistic Treadmill
+- Money as the New Food
+- The Modern Gut: Balancing Instinct and Intellect
+- Negative Emotions of the Gut: Pain Points
+- Fear and Anxiety
+- The Privates
+- The Drive to Reproduce
+- Modern Manifestations: Signalling and Status
+- Negative Emotions of the Privates
+- Raymond Loewy and the MAYA Principle
+- Balancing Novelty and Familiarity
+- Musical Structures and Familiarity
+- Consistency Builds Trust
+- Repetition Locks It In
+- The Pitfalls of Excessive Change
+- We are Myth-Makers
+- Storytelling Structures
+- 1. The Hero\'s Journey
+- 2. The Three-Act Structure
+- 3. The Mountain Structure
+- 4. The Pixar Framework
+- 5. Sequels
+- Connecting to the Old Brain
+- Evolving Archetypes
+- The Archetypes
+- Stability and Control Archetypes
+- 1. Creator
+- 2. Caregiver
+- 3. Ruler
+- Belonging & Enjoyment Archetypes
+- 4. Jester
+- 5. Regular Guy/Gal
+- 6. Lover
+- Risk & Mastery Archetypes
+- 7. Hero
+- 8. Outlaw
+- 9. Magician
+- Independence and Fulfilment Archetypes
+- 10 Explorer
+- 11. Innocent
+- 12. Sage
+- Why Nudging Works
+- Nudging the small gear in branding and business
+- Nudging as a Transformative Tool
+- Product labelling and positioning
+- Pricing strategies
+- Social proof
+- Default options
+- Scarcity and urgency
+- Personalization
+- Framing
+- Applying the Divided Brain to Your Brand
+- Value Is Perceived, Not Measured
+- What Is Your Brand Promise?
+- How the Brand Value Canvas Guides You
+- Instructions for Using This Canvas in Workshop
+- Step 1: Understanding Your Customer
+- Step 2: Your Brand\'s Response
+- Step 3: Evaluate Uniqueness
+- Step 4: Calculating Your Brand Value Score
+- Step 5: Develop your Brand Promise
+- What We Learned Through Two Lenses
+- Five Real‑World Playbooks
+- Mind the Ethical Edge
+- The Divided Brain and AI
+- A Parting Invitation

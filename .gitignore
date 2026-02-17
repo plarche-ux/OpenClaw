@@ -1,0 +1,7 @@
+# Ignore secrets and local config
+openclaw.json
+backups/openclaw.json.bak
+google-oauth.json
+.DS_Store
+node_modules/
+.env
