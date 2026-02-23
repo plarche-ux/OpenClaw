@@ -1,7 +1,39 @@
-# Ignore secrets and local config
-openclaw.json
-backups/openclaw.json.bak
-google-oauth.json
-.DS_Store
+# OpenClaw Workspace - Git Safe Exclusions
+# Keeps API keys, tokens, and secrets out of version control
+
+# API Keys & Credentials
+*.env
+.env*
+*-creds.env
+*credentials*
+*secrets*
+*api_key*
+gauth.json
+google_tokens.json
+client_secret*.json
+*oauth*.json
+auth-profiles.json
+
+# Amazon Ads tokens
+.moltbot/
+
+# Sensitive memory files (contains personal data)
+memory/reference/the-divided-brain-manuscript-complete.md
+
+# Temporary/generated files
+/tmp/
+*.log
+*.tmp
+
+# Node
 node_modules/
-.env
+
+# macOS
+.DS_Store
+
+# Keep these (explicitly safe to commit)
+# !memory/reference/divided-brain-branding.md
+# !memory/reference/RECOVERY-SOP.md
+# !skills/
+# !MEMORY.md
+backups/openclaw.json.bak

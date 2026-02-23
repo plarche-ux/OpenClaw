@@ -52,8 +52,9 @@ class AmazonAdsOAuthSkill {
       profileId: config.profileId || process.env.AMAZON_PROFILE_ID || '',
       region: config.region || process.env.AMAZON_REGION || 'US',
       redirectPort: config.redirectPort || 8080,
-      credentialsPath: config.credentialsPath || path.join(process.env.HOME || '', '.moltbot/.amazon-ads-creds.env'),
+      credentialsPath: config.credentialsPath || path.join(process.env.HOME || '', '.moltbot/.amazon-ads-oauth.json'),
     };
+    this.config.redirectUri = `https://paullarche.com`;
 
     this.encryptionKey = this.deriveEncryptionKey();
 
@@ -95,8 +96,7 @@ class AmazonAdsOAuthSkill {
     return crypto
       .createHash('sha256')
       .update(`amazon-ads-oauth-${machineId}`)
-      .digest('hex')
-      .slice(0, 32);
+      .digest('hex');
   }
 
   /**
@@ -118,11 +118,14 @@ class AmazonAdsOAuthSkill {
    * Generate the Login with Amazon authorization URL
    */
   private generateAuthorizationUrl(): string {
+    // IMPORTANT: redirectUri must match EXACTLY what is in Amazon Developer Console (currently https://paullarche.com)
+    // IMPORTANT: scopes must be limited to 'advertising::campaign_management profile'. 
+    // Do NOT add 'advertising::report_access' unless whitelisted first.
     const params = new URLSearchParams({
       client_id: this.config.clientId,
-      scope: 'advertising::campaign_management advertising::report_access',
+      scope: 'advertising::campaign_management profile',
       response_type: 'code',
-      redirect_uri: `http://localhost:${this.config.redirectPort}/callback`,
+      redirect_uri: this.config.redirectUri,
       state: crypto.randomBytes(16).toString('hex'),
     });
 

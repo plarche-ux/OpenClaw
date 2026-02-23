@@ -64,11 +64,12 @@ class AmazonAdsOptimizer {
    */
   analyzePerformance(data: any) {
     const suggestions = [];
+    const dashboardId = "1AcEqHFvH87X2DDXwWnS3O05Ewqp02HoBpUWaMTCh7pY";
 
     for (const campaign of data) {
       const spend = campaign.cost;
-      const sales = campaign.sales;
-      const kenpRevenue = (campaign.attributedKindleEditionNormalizedPagesRead14d || 0) * this.rules.targetKenpRate;
+      const sales = campaign.sales14d || 0;
+      const kenpRevenue = (campaign.kindleEditionNormalizedPagesRead14d || 0) * this.rules.targetKenpRate;
       const totalRevenue = sales + kenpRevenue;
       
       const realAcos = totalRevenue > 0 ? spend / totalRevenue : 0;
@@ -93,9 +94,18 @@ class AmazonAdsOptimizer {
           amount: 0.15
         });
       }
+
+      // Rule 3: Keyword Harvesting
+      if (campaign.targetingType === 'auto' && totalRevenue > 0) {
+         suggestions.push({
+          campaign: campaign.campaignName,
+          reason: `Converted in Auto campaign. Ready for harvest.`,
+          action: 'HARVEST_KEYWORD'
+        });
+      }
     }
 
-    return suggestions;
+    return { suggestions, dashboardId };
   }
 }
 

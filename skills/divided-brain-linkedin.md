@@ -19,16 +19,17 @@ metadata: { "openclaw": { "emoji": "🧠", "requires": { "skills": ["gog"] } } }
 Before writing, I will search the "LinkedIn Posts" Google Sheet (ID: `18x3Xd5oklGNgcZw-1sFSSiuKGHCoETbikyZ_BAR1MhY`) to ensure the topic or core story hasn't been used recently.
 
 ### 2. Semantic Research
-Search the book manuscript (`memory/reference/the-divided-brain-manuscript-part-1.md`) for the specific concept requested (e.g., Scarcity, Patternicity, The Big Three).
+Search the book manuscript (`memory/reference/the-divided-brain-manuscript-complete.md`) for the specific concept requested (e.g., Scarcity, Patternicity, The Big Three).
 
 ### 3. Draft the Post
-Using **Kimi K2.5** (my complex reasoning model), I will generate a draft following these 2026 best practices:
+Using **Sonnet 4.6** (or Kimi K2.5 for complex strategy), I will generate a draft following these 2026 best practices:
+- **Frequency:** Targeted for 3 posts per week.
 - **Hook:** Middle-of-the-story entry or a direct challenge to a business norm.
 - **Value:** A clear takeaway related to the "Divided Brain" gears.
 - **Call to Action (CTA):** A thoughtful question to spark comments (Old Brain tribalism/belonging).
 
-### 4. Logging
-When a post is approved and used, I will log the date, topic, and hook to `memory/projects/book-promotion/linkedin/linkedin-pipeline.csv`.
+### 4. Tracking
+When a post is approved and used, I will log the details to `memory/projects/linkedin-pipeline.csv`. I will also cross-reference with the Google Sheet (ID: `18x3Xd5oklGNgcZw-1sFSSiuKGHCoETbikyZ_BAR1MhY`) to ensure zero repetition.
 
 ## Trigger Phrases
 - "Generate a LinkedIn post about [topic]"
