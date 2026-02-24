@@ -1,0 +1,265 @@
+{
+  "version": 1,
+  "lastUpdated": "2026-02-23",
+  "shows": [
+    {
+      "id": "salespop-2026-02-24",
+      "showName": "Sales POP!",
+      "host": "John Golden",
+      "hostTitle": "CSMO, Pipeliner CRM | Former CEO, Huthwaite (SPIN Selling)",
+      "hostLinkedIn": "https://www.linkedin.com/in/johngolden",
+      "hostNotes": "1,600+ episodes hosted. Former CEO of Huthwaite (SPIN Selling). Audience is salespeople and sales leaders. Wants actionable takeaways. Will push back with 'what does the salesperson DO differently?'. Fast, structured, no fluff.",
+      "showStats": "Top 2% globally | 9,184 YouTube subs | 2M+ views | 59 Apple reviews",
+      "showUrl": "https://salespop.net",
+      "youtubeUrl": "https://www.youtube.com/@SalesPOP",
+      "status": "upcoming",
+      "date": "2026-02-24",
+      "time": "17:30",
+      "timezone": "ET",
+      "durationMin": 60,
+      "platform": "Restream",
+      "platformNotes": "MUST USE GOOGLE CHROME",
+      "sessionLink": "https://studio.restream.io/eW9Mb1FyYnmeEBxn9UBRoZkvbyxI38U",
+      "publicist": "Jimmy Dwyer — jimmy@dalynmillerpr.com — 703-772-1495",
+      "briefingPdf": "memory/projects/book-promotion/podcasts/briefing-salespop-2026-02-24.pdf",
+      "briefingMd": "memory/projects/book-promotion/podcasts/briefing-salespop-2026-02-24.md",
+      "anticipatedQuestions": [
+        "What is the Old Brain / New Brain concept and why does it matter for sales?",
+        "How does this change the way a salesperson should structure their pitch?",
+        "AI is writing sales emails and automating outreach — where does the human advantage live?",
+        "What's the biggest mistake salespeople make when it comes to emotional intelligence?",
+        "How does loss aversion factor into the sales process?",
+        "What about buyer resistance and objection handling?",
+        "Where can people find the book and learn more?"
+      ],
+      "cheatSheet": {
+        "bookClose": "It's called The Divided Brain — available on Amazon and at paullarche.com.",
+        "aiAnswer": "The human advantage is authentic emotional connection. AI can optimize for conversion, but it can't sit across the table and make someone feel genuinely understood. That's still a human skill.",
+        "credentialDrop": "BookLife Prize 10/10, Editor's Pick 2025 (Publisher's Weekly). Built 5 radio stations from scratch. 40 years in marketing.",
+        "deliveryRules": [
+          "Pause > uh. Stop, breathe, speak.",
+          "Scene first — open every answer with a real story.",
+          "End answers cleanly — land the point, stop, let host pick it up.",
+          "Frame everything through the sales lens for this audience."
+        ],
+        "techChecklist": [
+          "Open Restream link in Google Chrome",
+          "Headphones on",
+          "Good lighting (face the window)",
+          "Join 5-10 min early for sound check",
+          "Book copy nearby — may ask you to show it"
+        ]
+      },
+      "postShow": {
+        "recordingUrl": "",
+        "critiqueDate": "",
+        "scores": {
+          "frameworkClarity": null,
+          "storytelling": null,
+          "delivery": null,
+          "credibilitySignals": null,
+          "bookClose": null
+        },
+        "topImprovements": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": "travis-makes-money-2026-03-02",
+      "showName": "Travis Makes Money",
+      "host": "Travis Chappell",
+      "hostTitle": "Podcast host / Entrepreneur",
+      "hostLinkedIn": "",
+      "hostNotes": "Top 0.5% globally. Self-improvement focus. 1,459 episodes. High-energy host. Audience: entrepreneurs and people building wealth/success.",
+      "showStats": "Top 0.5% globally | 1,459 eps | 385 reviews | #232 Self-Improvement USA",
+      "showUrl": "",
+      "youtubeUrl": "",
+      "status": "confirmed",
+      "date": "2026-03-02",
+      "time": "14:00",
+      "timezone": "ET",
+      "durationMin": 60,
+      "platform": "Riverside",
+      "platformNotes": "MUST USE GOOGLE CHROME. Riverside link sent by Jimmy — test ahead of time.",
+      "sessionLink": "",
+      "publicist": "Jimmy Dwyer — jimmy@dalynmillerpr.com — 703-772-1495",
+      "briefingPdf": "",
+      "anticipatedQuestions": [],
+      "cheatSheet": {
+        "bookClose": "It's called The Divided Brain — available on Amazon and at paullarche.com.",
+        "aiAnswer": "The human advantage is authentic emotional connection. AI can optimize for conversion, but it can't sit across the table and make someone feel genuinely understood. That's still a human skill.",
+        "credentialDrop": "BookLife Prize 10/10, Editor's Pick 2025 (Publisher's Weekly). Built 5 radio stations from scratch. 40 years in marketing.",
+        "deliveryRules": [
+          "Pause > uh. Stop, breathe, speak.",
+          "Scene first — open every answer with a real story.",
+          "End answers cleanly — land the point, stop, let host pick it up."
+        ],
+        "techChecklist": [
+          "Open Riverside link in Google Chrome",
+          "Headphones on",
+          "Good lighting (face the window)",
+          "Join 5-10 min early for sound check"
+        ]
+      },
+      "postShow": {
+        "recordingUrl": "",
+        "critiqueDate": "",
+        "scores": { "frameworkClarity": null, "storytelling": null, "delivery": null, "credibilitySignals": null, "bookClose": null },
+        "topImprovements": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": "on-brand-2026-03-06",
+      "showName": "On Brand with Nick Westergaard",
+      "host": "Nick Westergaard",
+      "hostTitle": "Brand strategist, author, speaker",
+      "hostLinkedIn": "",
+      "hostNotes": "Top 1.5% globally. 603 episodes. Marketing/branding focus. Thoughtful, intellectual interviewer. Good fit for Divided Brain framework.",
+      "showStats": "Top 1.5% globally | 603 eps | 96 reviews | #244 Marketing USA",
+      "showUrl": "",
+      "youtubeUrl": "",
+      "status": "pending_confirmation",
+      "date": "2026-03-06",
+      "time": "TBD",
+      "timezone": "ET",
+      "durationMin": 60,
+      "platform": "TBD",
+      "platformNotes": "Paul offered 10am–3pm ET on Mar 6. Awaiting show confirmation.",
+      "sessionLink": "",
+      "publicist": "Jimmy Dwyer — jimmy@dalynmillerpr.com — 703-772-1495",
+      "briefingPdf": "",
+      "anticipatedQuestions": [],
+      "cheatSheet": {
+        "bookClose": "It's called The Divided Brain — available on Amazon and at paullarche.com.",
+        "aiAnswer": "The human advantage is authentic emotional connection. AI can optimize for conversion, but it can't sit across the table and make someone feel genuinely understood. That's still a human skill.",
+        "credentialDrop": "BookLife Prize 10/10, Editor's Pick 2025 (Publisher's Weekly). Built 5 radio stations from scratch. 40 years in marketing.",
+        "deliveryRules": [
+          "Pause > uh. Stop, breathe, speak.",
+          "Scene first — open every answer with a real story.",
+          "End answers cleanly — land the point, stop, let host pick it up."
+        ],
+        "techChecklist": []
+      },
+      "postShow": {
+        "recordingUrl": "",
+        "critiqueDate": "",
+        "scores": { "frameworkClarity": null, "storytelling": null, "delivery": null, "credibilitySignals": null, "bookClose": null },
+        "topImprovements": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": "out-of-the-box-2026-03-tbd",
+      "showName": "Out of the Box",
+      "host": "Christine Blosdale",
+      "hostTitle": "Podcast host",
+      "hostLinkedIn": "",
+      "hostNotes": "Top 2% globally. 248 episodes, 75 reviews. Hour-long format. Available dates: Mar 11-17.",
+      "showStats": "Top 2% globally | 248 eps | 75 reviews",
+      "showUrl": "",
+      "youtubeUrl": "",
+      "status": "new_opportunity",
+      "date": "",
+      "time": "",
+      "timezone": "ET",
+      "durationMin": 60,
+      "platform": "TBD",
+      "platformNotes": "Available: Mar 11 (5-7pm), Mar 12 (4:30-7:30pm), Mar 13 (6-7pm), Mar 16 (5:30-6:30pm), Mar 17 (8:30pm). Reply to jimmy@dalynmillerpr.com to schedule.",
+      "sessionLink": "",
+      "publicist": "Jimmy Dwyer — jimmy@dalynmillerpr.com — 703-772-1495",
+      "briefingPdf": "",
+      "anticipatedQuestions": [],
+      "cheatSheet": {
+        "bookClose": "It's called The Divided Brain — available on Amazon and at paullarche.com.",
+        "aiAnswer": "The human advantage is authentic emotional connection. AI can optimize for conversion, but it can't sit across the table and make someone feel genuinely understood. That's still a human skill.",
+        "credentialDrop": "BookLife Prize 10/10, Editor's Pick 2025 (Publisher's Weekly). Built 5 radio stations from scratch. 40 years in marketing.",
+        "deliveryRules": [],
+        "techChecklist": []
+      },
+      "postShow": {
+        "recordingUrl": "",
+        "critiqueDate": "",
+        "scores": { "frameworkClarity": null, "storytelling": null, "delivery": null, "credibilitySignals": null, "bookClose": null },
+        "topImprovements": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": "wholeceo-2026-02-17",
+      "showName": "WholeCEO with Lisa G",
+      "host": "Lisa Goldenthal",
+      "hostTitle": "WholeCEO podcast host / Fitness & business coach",
+      "hostLinkedIn": "",
+      "hostNotes": "Warm, enthusiastic interviewer. Audience: executives and business leaders. Episode 462.",
+      "showStats": "Top podcast | 248+ eps | Active YouTube presence",
+      "showUrl": "https://lisagfit.libsyn.com/rss",
+      "youtubeUrl": "https://youtu.be/1G2l-qw385s?si=PLbVWkA7iQKmOQ6m",
+      "status": "completed",
+      "date": "2026-02-17",
+      "time": "",
+      "timezone": "ET",
+      "durationMin": 21,
+      "platform": "Video recording",
+      "platformNotes": "",
+      "sessionLink": "",
+      "publicist": "Jimmy Dwyer — jimmy@dalynmillerpr.com — 703-772-1495",
+      "briefingPdf": "",
+      "anticipatedQuestions": [],
+      "cheatSheet": { "bookClose": "", "aiAnswer": "", "credentialDrop": "", "deliveryRules": [], "techChecklist": [] },
+      "postShow": {
+        "recordingUrl": "https://youtu.be/1G2l-qw385s?si=PLbVWkA7iQKmOQ6m",
+        "critiqueDate": "2026-02-23",
+        "scores": {
+          "frameworkClarity": 8,
+          "storytelling": 4,
+          "delivery": 5,
+          "credibilitySignals": 5,
+          "bookClose": 3
+        },
+        "topImprovements": [
+          "~65 uh/um fillers in 20 min — use pause instead",
+          "Stumbled on book title at close — practice until automatic",
+          "No scene-first structure — open every answer with a story"
+        ],
+        "notes": "Episode: 'AI, Algorithms, and Emotion, Oh My' (Ep. 462, 20:43)"
+      }
+    },
+    {
+      "id": "escaping-the-drift-2026-02-21",
+      "showName": "Escaping the Drift",
+      "host": "John Gafford",
+      "hostTitle": "Entrepreneur, real estate investor, podcast host",
+      "hostLinkedIn": "",
+      "hostNotes": "Top 1% globally. #13 Entrepreneurship, #33 Business on iTunes. High-energy host. Audience: entrepreneurs and business builders.",
+      "showStats": "Top 1% globally | 216 eps | 328 reviews | #13 Entrepreneurship iTunes",
+      "showUrl": "",
+      "youtubeUrl": "",
+      "status": "completed",
+      "date": "2026-02-21",
+      "time": "16:00",
+      "timezone": "ET",
+      "durationMin": 60,
+      "platform": "Zoom",
+      "platformNotes": "",
+      "sessionLink": "",
+      "publicist": "Jimmy Dwyer — jimmy@dalynmillerpr.com — 703-772-1495",
+      "briefingPdf": "",
+      "anticipatedQuestions": [
+        "Why has trust become such a defining measure of credibility in an AI-shaped environment?",
+        "Where are people most vulnerable to subtle emotional influence online?",
+        "What changes when personalization makes technology feel personal to the user?",
+        "In plain language, what do you mean by the Old Brain and the New Brain?",
+        "Why do emotional triggers outlast rational arguments in decision-making?"
+      ],
+      "cheatSheet": { "bookClose": "", "aiAnswer": "", "credentialDrop": "", "deliveryRules": [], "techChecklist": [] },
+      "postShow": {
+        "recordingUrl": "",
+        "critiqueDate": "",
+        "scores": { "frameworkClarity": null, "storytelling": null, "delivery": null, "credibilitySignals": null, "bookClose": null },
+        "topImprovements": [],
+        "notes": "Critique pending — no recording link yet"
+      }
+    }
+  ]
+}

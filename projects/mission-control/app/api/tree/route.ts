@@ -3,7 +3,7 @@ import fs from 'fs'
 import path from 'path'
 
 const WORKSPACE = '/Users/paul/.openclaw/workspace'
-const EXCLUDE = new Set(['node_modules', '.git', 'projects', '.next'])
+const EXCLUDE = new Set(['node_modules', '.git', '.next'])
 
 export interface TreeNode {
   name: string

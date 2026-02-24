@@ -1,0 +1,158 @@
+{
+  "version": 1,
+  "lastSync": "2026-02-22",
+  "attributionLagHours": 48,
+  "book": {
+    "title": "The Divided Brain",
+    "asin": "",
+    "marketplace": "amazon.com",
+    "price": 18.99,
+    "royaltyPerSale": 6.00,
+    "breakevenAcos": 31.6
+  },
+  "metrics": {
+    "window": "30d",
+    "asOf": "2026-02-22",
+    "spend": 116.66,
+    "sales": 3.99,
+    "acos": 2923,
+    "roas": 0.034,
+    "impressions": null,
+    "clicks": null,
+    "ctr": null,
+    "unitsAttributed": 1,
+    "targetAcos": 35
+  },
+  "history": [
+    {
+      "date": "2026-02-22",
+      "spend": 116.66,
+      "sales": 3.99,
+      "acos": 2923,
+      "unitsAttributed": 1,
+      "note": "Post-surgical-cuts baseline"
+    }
+  ],
+  "keywords": [
+    {
+      "term": "branding",
+      "matchType": "broad",
+      "status": "paused",
+      "impressions": null,
+      "clicks": null,
+      "spend": null,
+      "sales": 0,
+      "acos": null,
+      "reason": "High spend, zero conversions — paused Feb 21",
+      "addedDate": null,
+      "pausedDate": "2026-02-21"
+    },
+    {
+      "term": "decision making",
+      "matchType": "broad",
+      "status": "active",
+      "impressions": null,
+      "clicks": null,
+      "spend": null,
+      "sales": null,
+      "acos": null,
+      "reason": "Targeted, lower competition — added Feb 21",
+      "addedDate": "2026-02-21",
+      "pausedDate": null
+    },
+    {
+      "term": "behavioral psychology",
+      "matchType": "broad",
+      "status": "active",
+      "impressions": null,
+      "clicks": null,
+      "spend": null,
+      "sales": null,
+      "acos": null,
+      "reason": "On-topic audience — added Feb 21",
+      "addedDate": "2026-02-21",
+      "pausedDate": null
+    }
+  ],
+  "campaigns": [
+    {
+      "name": "Auto Discovery",
+      "type": "automatic",
+      "pillar": 1,
+      "status": "active",
+      "dailyBudget": null,
+      "notes": "Discovery — mine search term report for winners"
+    }
+  ],
+  "competitorWatchlist": [
+    { "title": "Thinking, Fast and Slow", "author": "Daniel Kahneman", "asin": "0374533555", "targeting": "pending" },
+    { "title": "Predictably Irrational", "author": "Dan Ariely", "asin": "0061353248", "targeting": "pending" },
+    { "title": "The Power of Habit", "author": "Charles Duhigg", "asin": "081298160X", "targeting": "pending" },
+    { "title": "Influence", "author": "Robert Cialdini", "asin": "006124189X", "targeting": "pending" },
+    { "title": "Blink", "author": "Malcolm Gladwell", "asin": "0316010669", "targeting": "pending" }
+  ],
+  "optimizationLog": [
+    {
+      "date": "2026-02-21",
+      "type": "keyword_paused",
+      "detail": "Paused broad keyword 'branding' — high spend, zero conversions",
+      "impact": "pending"
+    },
+    {
+      "date": "2026-02-21",
+      "type": "keyword_added",
+      "detail": "Added 'decision making' (broad) — targeted, lower competition",
+      "impact": "pending"
+    },
+    {
+      "date": "2026-02-21",
+      "type": "keyword_added",
+      "detail": "Added 'behavioral psychology' (broad) — on-topic audience",
+      "impact": "pending"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "high",
+      "category": "campaign_structure",
+      "title": "Implement 3-Pillar Campaign Structure",
+      "detail": "Currently only 1 auto campaign. Add Pillar 2 (Manual Exact — proven winners) and Pillar 3 (Brand Defense — your title + author name). This is the industry standard for book ads.",
+      "effort": "medium"
+    },
+    {
+      "priority": "high",
+      "category": "keywords",
+      "title": "Add Competitor Author Targeting",
+      "detail": "Target searches for: Daniel Kahneman, Dan Ariely, Robert Cialdini, Malcolm Gladwell. These readers are pre-qualified for behavioral psychology content.",
+      "effort": "low"
+    },
+    {
+      "priority": "high",
+      "category": "keywords",
+      "title": "Add Negative Keywords",
+      "detail": "Block: 'free', 'textbook', 'workbook', 'audiobook' (if not on Audible), 'novel', 'fiction'. Stops wasted spend on non-buyers.",
+      "effort": "low"
+    },
+    {
+      "priority": "medium",
+      "category": "product_targeting",
+      "title": "ASIN Target Competitor Book Pages",
+      "detail": "Run product ads on detail pages of: Thinking Fast and Slow, Predictably Irrational, The Power of Habit, Influence, Blink. Your ad appears to readers already interested in behavioral psychology.",
+      "effort": "low"
+    },
+    {
+      "priority": "medium",
+      "category": "bidding",
+      "title": "Review Bids After 2-Week Data Window",
+      "detail": "Attribution lag means current data is incomplete. After Feb 26, review search term report: raise bids 10-15% on keywords with 5+ clicks and 1+ sale. Pause anything with 10+ clicks and zero KENP or sales.",
+      "effort": "low"
+    },
+    {
+      "priority": "low",
+      "category": "creative",
+      "title": "A/B Test Ad Copy",
+      "detail": "Test two hooks: (1) Cialdini angle 'The book Cialdini fans read next' vs (2) Outcome angle 'Make better decisions every day'. BookLife 10/10 badge is a strong credibility signal — use it.",
+      "effort": "medium"
+    }
+  ]
+}

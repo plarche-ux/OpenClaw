@@ -1,0 +1,194 @@
+{
+  "version": 1,
+  "projects": [
+    {
+      "id": "book-promotion",
+      "name": "Book Promotion",
+      "color": "#f59e0b"
+    },
+    {
+      "id": "mission-control",
+      "name": "Mission Control",
+      "color": "#6366f1"
+    },
+    {
+      "id": "brand-value-canvas",
+      "name": "Brand Value Canvas",
+      "color": "#10b981"
+    },
+    {
+      "id": "barrie-cares",
+      "name": "Barrie Cares",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "website",
+      "name": "Website",
+      "color": "#ec4899"
+    },
+    {
+      "id": "general",
+      "name": "General",
+      "color": "#94a3b8"
+    }
+  ],
+  "agents": [
+    {
+      "id": "paul",
+      "name": "Paul",
+      "emoji": "👤",
+      "role": "owner"
+    },
+    {
+      "id": "neo",
+      "name": "Neo",
+      "emoji": "🕶️",
+      "role": "primary-agent"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "t-001",
+      "title": "Rewrite AGENTS.md",
+      "description": "Replace 'read files every session' with QMD search approach. heartbeat-state.json deleted — ready to rewrite.",
+      "status": "done",
+      "priority": "high",
+      "project": "general",
+      "assignee": "neo",
+      "tags": [
+        "config"
+      ],
+      "createdAt": "2026-02-23T00:00:00Z",
+      "updatedAt": "2026-02-23T18:52:46.656Z"
+    },
+    {
+      "id": "t-002",
+      "title": "Fix Brand Value Canvas sidebar bleed",
+      "description": "Add overflow-hidden to sidebar wrapper divs at lines 242, 285, 307, 329 in Canvas.tsx",
+      "status": "backlog",
+      "priority": "medium",
+      "project": "brand-value-canvas",
+      "assignee": "neo",
+      "tags": [
+        "bug",
+        "ui"
+      ],
+      "createdAt": "2026-02-23T00:00:00Z",
+      "updatedAt": "2026-02-23T00:00:00Z"
+    },
+    {
+      "id": "t-003",
+      "title": "Get fresh Perplexity API key",
+      "description": "Current key returns 401. Get new key from perplexity.ai/settings/api",
+      "status": "in_progress",
+      "priority": "medium",
+      "project": "general",
+      "assignee": "paul",
+      "tags": [
+        "api-keys"
+      ],
+      "createdAt": "2026-02-23T00:00:00Z",
+      "updatedAt": "2026-02-23T18:54:21.621Z"
+    },
+    {
+      "id": "t-004",
+      "title": "Set Gemini API billing cap",
+      "description": "Set daily quota limit in Google Cloud Console to prevent unexpected charges.",
+      "status": "review",
+      "priority": "high",
+      "project": "general",
+      "assignee": "paul",
+      "tags": [
+        "billing"
+      ],
+      "createdAt": "2026-02-23T00:00:00Z",
+      "updatedAt": "2026-02-23T18:53:12.709Z"
+    },
+    {
+      "id": "t-005",
+      "title": "Draft LinkedIn post #2 — Scarcity & Loss Aversion",
+      "description": "Thursday post. Topic: scarcity and loss aversion from The Divided Brain. Check linkedin-pipeline.csv first.",
+      "status": "done",
+      "priority": "high",
+      "project": "book-promotion",
+      "assignee": "neo",
+      "tags": [
+        "linkedin",
+        "content"
+      ],
+      "createdAt": "2026-02-23T00:00:00Z",
+      "updatedAt": "2026-02-23T21:07:11.788Z"
+    },
+    {
+      "id": "t-006",
+      "title": "Draft LinkedIn post #3 — Archetypes",
+      "description": "Saturday post. Topic: archetypes from The Divided Brain. Check linkedin-pipeline.csv first.",
+      "status": "done",
+      "priority": "medium",
+      "project": "book-promotion",
+      "assignee": "neo",
+      "tags": [
+        "linkedin",
+        "content"
+      ],
+      "createdAt": "2026-02-23T00:00:00Z",
+      "updatedAt": "2026-02-23T21:07:14.703Z"
+    },
+    {
+      "id": "t-007",
+      "title": "Rewrite Speaking + About page",
+      "description": "Rewrite in Elementor. Apply new Cialdini-positioning voice and BookLife badge.",
+      "status": "backlog",
+      "priority": "medium",
+      "project": "website",
+      "assignee": "paul",
+      "tags": [
+        "copywriting"
+      ],
+      "createdAt": "2026-02-23T00:00:00Z",
+      "updatedAt": "2026-02-23T00:00:00Z"
+    },
+    {
+      "id": "t-008",
+      "title": "Apply hero headline + CTA to website",
+      "description": "Apply hero headline, sub-headline, CTA, BookLife badge, Cialdini line in Elementor.",
+      "status": "backlog",
+      "priority": "medium",
+      "project": "website",
+      "assignee": "paul",
+      "tags": [
+        "copywriting"
+      ],
+      "createdAt": "2026-02-23T00:00:00Z",
+      "updatedAt": "2026-02-23T00:00:00Z"
+    },
+    {
+      "id": "t-009",
+      "title": "Create Brand Value Canvas lead magnet PDF",
+      "description": "Brand Value Canvas PDF → email opt-in. Needs email platform connected first.",
+      "status": "backlog",
+      "priority": "low",
+      "project": "brand-value-canvas",
+      "assignee": "neo",
+      "tags": [
+        "lead-gen"
+      ],
+      "createdAt": "2026-02-23T00:00:00Z",
+      "updatedAt": "2026-02-23T00:00:00Z"
+    },
+    {
+      "id": "t-010",
+      "title": "Full paullarche.com site audit + rebuild plan",
+      "description": "6 marketing gaps already identified. Paul open to full rebuild. Run subagent audit (Gemini 3.1).",
+      "status": "in_progress",
+      "priority": "medium",
+      "project": "website",
+      "assignee": "neo",
+      "tags": [
+        "audit"
+      ],
+      "createdAt": "2026-02-23T00:00:00Z",
+      "updatedAt": "2026-02-23T18:54:11.752Z"
+    }
+  ]
+}

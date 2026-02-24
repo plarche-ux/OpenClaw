@@ -1,23 +1,26 @@
 # BOOT.md — Gateway Startup Checklist
 
-Runs automatically on gateway restart. Keep this short.
+Dev servers are now managed by **PM2** and start automatically on gateway restart and Mac reboot.
+No manual startup needed.
 
-## 1. Start Mission Control
+## Verify servers are running
 
 ```bash
-pkill -f "next dev -p 3001" 2>/dev/null; sleep 1
-cd /Users/paul/.openclaw/workspace/projects/mission-control && npm run dev &
+pm2 list
 ```
 
-Wait ~5 seconds, then verify it responds at http://localhost:3001.
+Both `brand-value-canvas` (:3000) and `mission-control` (:3001) should show `online`.
 
-## 2. Skip Brand Value Canvas
+## If a server is down
 
-Only start it if Paul asks — it's not needed at all times.
+```bash
+pm2 restart brand-value-canvas
+pm2 restart mission-control
+```
 
-## 3. Notify Paul (only if startup fails)
+## Notify Paul only if restart fails
 
-If Mission Control doesn't respond after 10 seconds, send a Telegram message:
-> "⚠️ Mission Control failed to start after gateway restart. Run: `cd projects/mission-control && npm run dev`"
+If `pm2 restart` doesn't bring it online, send a Telegram message:
+> "⚠️ [server name] failed to restart. Run: `pm2 logs [server name]` to diagnose."
 
-Silent success = fine. Don't message Paul if everything started cleanly.
+Silent success = fine. Don't message Paul if everything is running.

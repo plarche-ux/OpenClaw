@@ -10,6 +10,7 @@ import {
   Wrench,
   TrendingUp,
   Linkedin,
+  Mic,
   Activity,
   Users,
   Zap,
@@ -24,6 +25,7 @@ const navItems = [
   { href: '/tools', label: 'Tools', icon: Wrench },
   { href: '/amazon-ads', label: 'Amazon Ads', icon: TrendingUp },
   { href: '/linkedin', label: 'LinkedIn', icon: Linkedin },
+  { href: '/podcasts', label: 'Podcasts', icon: Mic },
   { href: '/system', label: 'System', icon: Activity },
   { href: '/team', label: 'Team', icon: Users },
 ]

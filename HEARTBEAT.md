@@ -14,7 +14,10 @@ Only notify Paul if there are errors. Silent success = fine.
 - Email: Any urgent unread?
 - Calendar: Events in next 24-48h?
 - Amazon Ads: Any alerts from the skill?
-- LinkedIn: Any pending posts due today?
+- LinkedIn: Read `memory/linkedin-posts.json`. Check:
+  1. Any post with `status: approved` scheduled for today or tomorrow? → Remind Paul to post it.
+  2. No post scheduled in the next 2 days AND today is Mon/Wed/Sat (or the day before)? → Notify Paul a new post slot is coming up.
+  3. More than 3 days since last published post? → Nudge Paul.
 
 ## Reminder
 Silent success on QMD sync is fine — only notify Paul on errors.
