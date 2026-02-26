@@ -39,16 +39,18 @@ export default function MemoryPage() {
   return (
     <div>
       <div className="flex items-center gap-2 mb-6">
-        <Brain size={22} className="text-amber-400" />
-        <h1 className="text-2xl font-bold text-slate-900">Memory</h1>
+        <Brain size={22} className="text-[#00ff41]" />
+        <h1 className="text-2xl font-bold text-white">Memory</h1>
       </div>
 
       <div className="flex gap-6">
         {/* Sidebar */}
         <div className="w-52 shrink-0">
           <button
-            className={`flex items-center gap-2 w-full text-left px-3 py-2 rounded-lg text-sm font-medium mb-2 transition-colors ${
-              view === 'main' ? 'bg-amber-50 text-amber-700' : 'text-slate-600 hover:bg-slate-100'
+            className={`flex items-center gap-2 w-full text-left px-3 py-2 rounded-lg text-sm font-medium mb-2 transition-all ${
+              view === 'main' 
+                ? 'bg-[#00ff41] text-[#0a0a0a] shadow-[0_0_10px_rgba(0,255,65,0.2)]' 
+                : 'text-[#6b7280] hover:bg-[#111827] hover:text-[#e2e8f0]'
             }`}
             onClick={() => setView('main')}
           >
@@ -57,14 +59,14 @@ export default function MemoryPage() {
 
           {dailyFiles.length > 0 && (
             <>
-              <p className="text-xs text-slate-400 uppercase tracking-wide px-3 mt-3 mb-2">Daily Notes</p>
+              <p className="text-xs text-[#6b7280] uppercase tracking-wide px-3 mt-3 mb-2">Daily Notes</p>
               {dailyFiles.map(f => (
                 <button
                   key={f}
-                  className={`flex items-center gap-2 w-full text-left px-3 py-1.5 rounded-lg text-sm transition-colors ${
+                  className={`flex items-center gap-2 w-full text-left px-3 py-1.5 rounded-lg text-sm transition-all ${
                     selectedDaily === f && view === 'daily'
-                      ? 'bg-amber-50 text-amber-700 font-medium'
-                      : 'text-slate-600 hover:bg-slate-100'
+                      ? 'bg-[#003d0f] text-[#00ff41] border border-[#00ff41]/30'
+                      : 'text-[#6b7280] hover:bg-[#111827] hover:text-[#e2e8f0]'
                   }`}
                   onClick={() => openDaily(f)}
                 >
@@ -77,25 +79,25 @@ export default function MemoryPage() {
         </div>
 
         {/* Content */}
-        <div className="flex-1 bg-white border border-slate-200 rounded-xl p-6 overflow-auto max-h-[80vh]">
+        <div className="flex-1 bg-[#111827] border border-[#1f2937] rounded-xl p-6 overflow-auto max-h-[80vh]">
           {view === 'main' && (
-            <div className="prose max-w-none text-sm text-slate-800">
+            <div className="prose prose-invert max-w-none text-sm">
               <ReactMarkdown remarkPlugins={[remarkGfm]}>{mainContent}</ReactMarkdown>
             </div>
           )}
           {view === 'daily' && (
             <div>
-              <div className="flex items-center gap-2 mb-4 text-slate-500 text-sm">
-                <button className="hover:text-amber-600" onClick={() => setView('main')}>
+              <div className="flex items-center gap-2 mb-4 text-[#6b7280] text-sm">
+                <button className="hover:text-[#00ff41] transition-colors" onClick={() => setView('main')}>
                   Memory
                 </button>
                 <ChevronRight size={14} />
-                <span className="font-medium text-slate-700">{selectedDaily}</span>
+                <span className="font-medium text-[#e2e8f0] font-mono">{selectedDaily}</span>
               </div>
               {loading ? (
-                <p className="text-slate-400 text-sm">Loading…</p>
+                <p className="text-[#6b7280] text-sm animate-pulse">Loading…</p>
               ) : (
-                <div className="prose max-w-none text-sm text-slate-800">
+                <div className="prose prose-invert max-w-none text-sm">
                   <ReactMarkdown remarkPlugins={[remarkGfm]}>{dailyContent}</ReactMarkdown>
                 </div>
               )}

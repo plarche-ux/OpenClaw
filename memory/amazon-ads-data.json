@@ -25,6 +25,14 @@
   },
   "history": [
     {
+      "date": "2026-02-25",
+      "spend": null,
+      "sales": null,
+      "acos": null,
+      "unitsAttributed": null,
+      "note": "Optimization Window: Applied Negative Keywords (free, textbook, workbook, audiobook, novel, fiction) and harvested 'Practical Psychology' as Exact Match."
+    },
+    {
       "date": "2026-02-22",
       "spend": 116.66,
       "sales": 3.99,

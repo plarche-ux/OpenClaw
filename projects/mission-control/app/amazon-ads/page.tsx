@@ -115,42 +115,42 @@ function fmtNum( v: number | null | undefined ) {
 }
 
 function acosColor( v: number | null ) {
-  if (v == null) return 'text-slate-400'
-  if (v <= 35) return 'text-green-600'
-  if (v <= 100) return 'text-amber-600'
-  return 'text-red-600'
+  if (v == null) return 'text-[#6b7280]'
+  if (v <= 35) return 'text-[#00ff41]'
+  if (v <= 100) return 'text-[#00cc33]'
+  return 'text-red-500'
 }
 
 function acosBarColor( v: number | null ) {
-  if (v == null) return 'bg-slate-300'
-  if (v <= 35) return 'bg-green-500'
-  if (v <= 100) return 'bg-amber-400'
+  if (v == null) return 'bg-[#1f2937]'
+  if (v <= 35) return 'bg-[#00ff41]'
+  if (v <= 100) return 'bg-[#00cc33]'
   return 'bg-red-500'
 }
 
 const PRIORITY_COLORS: Record<string, string> = {
-  high:   'bg-red-100 text-red-700 border border-red-200',
-  medium: 'bg-amber-100 text-amber-700 border border-amber-200',
-  low:    'bg-slate-100 text-slate-600 border border-slate-200',
+  high:   'bg-red-950/40 text-red-400 border border-red-500/30',
+  medium: 'bg-[#003d0f] text-[#00ff41] border border-[#00ff41]/30',
+  low:    'bg-[#1f2937] text-[#6b7280] border border-[#374151]',
 }
 
 const EFFORT_COLORS: Record<string, string> = {
-  low:    'bg-green-50 text-green-700',
-  medium: 'bg-amber-50 text-amber-700',
-  high:   'bg-red-50 text-red-700',
+  low:    'bg-[#003d0f] text-[#00ff41]',
+  medium: 'bg-blue-950/30 text-blue-400',
+  high:   'bg-red-950/30 text-red-400',
 }
 
 const LOG_TYPE_COLORS: Record<string, string> = {
-  keyword_paused:   'bg-red-100 text-red-700',
-  keyword_added:    'bg-green-100 text-green-700',
-  bid_adjusted:     'bg-amber-100 text-amber-700',
-  campaign_created: 'bg-blue-100 text-blue-700',
+  keyword_paused:   'bg-red-950/30 text-red-400',
+  keyword_added:    'bg-[#003d0f] text-[#00ff41]',
+  bid_adjusted:     'bg-blue-950/30 text-blue-400',
+  campaign_created: 'bg-purple-950/30 text-purple-400',
 }
 
 const TARGETING_COLORS: Record<string, string> = {
-  pending: 'bg-amber-100 text-amber-700',
-  active:  'bg-green-100 text-green-700',
-  paused:  'bg-slate-100 text-slate-500',
+  pending: 'bg-[#003d0f] text-[#00ff41]',
+  active:  'bg-blue-950/30 text-blue-400',
+  paused:  'bg-[#1f2937] text-[#6b7280]',
 }
 
 // ── Toast ──────────────────────────────────────────────────────────────────────
@@ -161,8 +161,8 @@ function Toast({ msg, onDone }: { msg: string; onDone: () => void }) {
     return () => clearTimeout(t)
   }, [onDone])
   return (
-    <div className="fixed bottom-6 right-6 z-50 bg-slate-900 text-white text-sm px-4 py-3 rounded-xl shadow-xl flex items-center gap-2 animate-in slide-in-from-bottom-4">
-      <Zap size={14} className="text-amber-400" />
+    <div className="fixed bottom-6 right-6 z-50 bg-[#111827] text-white text-sm px-4 py-3 rounded-xl shadow-[0_0_20px_rgba(0,255,65,0.2)] border border-[#00ff41]/30 flex items-center gap-2 animate-in slide-in-from-bottom-4">
+      <Zap size={14} className="text-[#00ff41]" />
       {msg}
     </div>
   )
@@ -205,16 +205,16 @@ export default function AmazonAdsPage() {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center h-64 text-slate-400 text-sm">
-        Loading Amazon Ads data…
+      <div className="flex items-center justify-center h-64 text-[#6b7280] text-sm font-mono animate-pulse">
+        Initializing ad stream…
       </div>
     )
   }
 
   if (!data) {
     return (
-      <div className="flex items-center justify-center h-64 text-slate-400 text-sm">
-        Failed to load data.
+      <div className="flex items-center justify-center h-64 text-red-400 text-sm">
+        Link dropped. Failed to load data.
       </div>
     )
   }
@@ -253,31 +253,31 @@ export default function AmazonAdsPage() {
       <div className="flex items-start justify-between gap-4">
         <div>
           <div className="flex items-center gap-2 mb-1">
-            <TrendingUp size={22} className="text-amber-400" />
-            <h1 className="text-2xl font-bold text-slate-900">Amazon Ads</h1>
+            <TrendingUp size={22} className="text-[#00ff41]" />
+            <h1 className="text-2xl font-bold text-white">Amazon Ads</h1>
           </div>
-          <p className="text-slate-400 text-sm">
-            Campaign intelligence for <span className="text-slate-600 font-medium">{book.title ?? 'your book'}</span>
+          <p className="text-[#6b7280] text-sm">
+            Campaign intelligence for <span className="text-[#e2e8f0] font-medium">{book.title ?? 'your book'}</span>
           </p>
         </div>
         <button
           onClick={triggerSync}
           disabled={syncing}
-          className="flex items-center gap-2 text-sm font-medium border border-slate-200 text-slate-600 hover:border-slate-300 hover:text-slate-800 px-4 py-2 rounded-lg transition-colors disabled:opacity-50 shrink-0"
+          className="flex items-center gap-2 text-sm font-medium border border-[#1f2937] text-[#e2e8f0] hover:border-[#00ff41]/50 hover:text-[#00ff41] px-4 py-2 rounded-lg transition-all disabled:opacity-50 shrink-0 shadow-[0_0_10px_rgba(0,0,0,0.3)]"
         >
-          <RefreshCw size={14} className={syncing ? 'animate-spin' : ''} />
+          <RefreshCw size={14} className={syncing ? 'animate-spin text-[#00ff41]' : ''} />
           {syncing ? 'Requesting…' : 'Sync Data'}
         </button>
       </div>
 
       {/* Attribution lag banner */}
-      <div className="flex items-start gap-3 bg-amber-50 border border-amber-200 rounded-xl p-3.5 text-sm text-amber-800">
+      <div className="flex items-start gap-3 bg-[#003d0f]/20 border border-[#00ff41]/30 rounded-xl p-3.5 text-sm text-[#00ff41]">
         <AlertCircle size={15} className="shrink-0 mt-0.5" />
         <div>
-          <span className="font-semibold">48-hour attribution lag.</span>{' '}
+          <span className="font-semibold font-mono">Attribution lag detected.</span>{' '}
           Data is delayed — conversions from the last 2 days may not yet appear.
           {data.lastSync && (
-            <span className="ml-1 text-amber-600">Last sync: {data.lastSync}.</span>
+            <span className="ml-1 text-[#00cc33] opacity-70">Last sync: {data.lastSync}.</span>
           )}
         </div>
       </div>
@@ -288,13 +288,13 @@ export default function AmazonAdsPage() {
           {
             label: 'Spend (30d)',
             value: fmt$(metrics.spend),
-            color: 'text-amber-500',
+            color: 'text-[#00ff41]',
             sub: metrics.asOf ? `as of ${metrics.asOf}` : null,
           },
           {
             label: 'Sales (30d)',
             value: fmt$(metrics.sales),
-            color: 'text-green-600',
+            color: 'text-blue-400',
             sub: null,
           },
           {
@@ -306,46 +306,46 @@ export default function AmazonAdsPage() {
           {
             label: 'ROAS',
             value: metrics.roas != null ? metrics.roas.toFixed(2) + 'x' : '—',
-            color: metrics.roas != null && metrics.roas >= 1 ? 'text-green-600' : 'text-red-500',
+            color: metrics.roas != null && metrics.roas >= 1 ? 'text-[#00ff41]' : 'text-red-400',
             sub: 'sales ÷ spend',
           },
           {
             label: 'Units',
             value: fmtNum(metrics.unitsAttributed),
-            color: 'text-slate-700',
+            color: 'text-[#e2e8f0]',
             sub: 'attributed',
           },
         ].map(({ label, value, color, sub }) => (
-          <div key={label} className="bg-white border border-slate-200 rounded-xl p-4">
-            <div className="text-xs text-slate-400 uppercase tracking-wide mb-1">{label}</div>
-            <div className={`text-2xl font-bold ${color}`}>{value}</div>
-            {sub && <div className="text-xs text-slate-400 mt-1">{sub}</div>}
+          <div key={label} className="bg-[#111827] border border-[#1f2937] rounded-xl p-4 hover:border-[#00ff41]/30 transition-all">
+            <div className="text-xs text-[#6b7280] uppercase tracking-wide mb-1">{label}</div>
+            <div className={`text-2xl font-bold font-mono ${color}`}>{value}</div>
+            {sub && <div className="text-xs text-[#6b7280] mt-1 font-mono opacity-70">{sub}</div>}
           </div>
         ))}
       </div>
 
       {/* ── 2. ACoS Health Bar ───────────────────────────────────────── */}
-      <div className="bg-white border border-slate-200 rounded-xl p-5">
+      <div className="bg-[#111827] border border-[#1f2937] rounded-xl p-5">
         <div className="flex items-center gap-2 mb-4">
-          <BarChart2 size={16} className="text-amber-400" />
-          <h2 className="font-semibold text-slate-900">ACoS Health</h2>
+          <BarChart2 size={16} className="text-[#00ff41]" />
+          <h2 className="font-semibold text-white">ACoS Health</h2>
         </div>
 
-        <div className="relative h-8 bg-slate-100 rounded-full overflow-visible mb-6">
+        <div className="relative h-8 bg-[#0a0a0a] rounded-full overflow-visible mb-6 border border-[#1f2937]">
           {/* Green zone: 0 → breakeven */}
           <div
-            className="absolute top-0 left-0 h-full bg-green-100 rounded-l-full"
+            className="absolute top-0 left-0 h-full bg-[#00ff41]/10 rounded-l-full"
             style={{ width: `${breakevenPct}%` }}
           />
           {/* Amber zone: breakeven → target */}
           <div
-            className="absolute top-0 h-full bg-amber-50"
+            className="absolute top-0 h-full bg-[#00ff41]/5"
             style={{ left: `${breakevenPct}%`, width: `${targetPct - breakevenPct}%` }}
           />
 
           {/* Current ACoS fill bar */}
           <div
-            className={`absolute top-0 left-0 h-full rounded-full transition-all ${acosBarColor(metrics.acos)}`}
+            className={`absolute top-0 left-0 h-full rounded-full transition-all shadow-[0_0_15px_rgba(0,255,65,0.2)] ${acosBarColor(metrics.acos)}`}
             style={{ width: `${currentPct}%`, opacity: 0.8 }}
           />
 
@@ -354,9 +354,9 @@ export default function AmazonAdsPage() {
             className="absolute top-0 h-full flex flex-col items-center"
             style={{ left: `${breakevenPct}%` }}
           >
-            <div className="w-0.5 h-full bg-green-600" />
-            <span className="absolute -top-6 text-xs text-green-700 font-medium whitespace-nowrap -translate-x-1/2">
-              Breakeven {breakevenAcos}%
+            <div className="w-0.5 h-full bg-[#00ff41] shadow-[0_0_8px_rgba(0,255,65,0.5)]" />
+            <span className="absolute -top-6 text-xs text-[#00ff41] font-mono whitespace-nowrap -translate-x-1/2">
+              BE {breakevenAcos}%
             </span>
           </div>
 
@@ -365,58 +365,58 @@ export default function AmazonAdsPage() {
             className="absolute top-0 h-full flex flex-col items-center"
             style={{ left: `${targetPct}%` }}
           >
-            <div className="w-0.5 h-full bg-amber-500" />
-            <span className="absolute -bottom-6 text-xs text-amber-700 font-medium whitespace-nowrap -translate-x-1/2">
+            <div className="w-0.5 h-full bg-blue-400" />
+            <span className="absolute -bottom-6 text-xs text-blue-400 font-mono whitespace-nowrap -translate-x-1/2">
               Target {targetAcos}%
             </span>
           </div>
         </div>
 
         <div className="flex items-center justify-between mt-2 text-sm">
-          <span className="text-slate-500">0%</span>
-          <span className={`font-bold text-base ${acosColor(metrics.acos)}`}>
+          <span className="text-[#6b7280] font-mono">0%</span>
+          <span className={`font-bold text-base font-mono ${acosColor(metrics.acos)}`}>
             Current ACoS: {fmtPct(metrics.acos)}
           </span>
-          <span className="text-slate-500">{barMax}%</span>
+          <span className="text-[#6b7280] font-mono">{barMax}%</span>
         </div>
       </div>
 
       {/* ── 3. Recommendations Panel ─────────────────────────────────── */}
       {recommendations.length > 0 && (
-        <div className="bg-white border border-slate-200 rounded-xl p-5">
+        <div className="bg-[#111827] border border-[#1f2937] rounded-xl p-5">
           <div className="flex items-center gap-2 mb-4">
-            <Zap size={16} className="text-amber-400" />
-            <h2 className="font-semibold text-slate-900">Recommendations</h2>
-            <span className="ml-auto text-xs text-slate-400">{recommendations.length} total</span>
+            <Zap size={16} className="text-[#00ff41]" />
+            <h2 className="font-semibold text-white">Recommendations</h2>
+            <span className="ml-auto text-xs text-[#6b7280] font-mono">{recommendations.length} total</span>
           </div>
           <div className="space-y-3">
             {visibleRecs.map((rec, i) => (
-              <div key={i} className="border border-slate-100 rounded-xl p-4 hover:border-slate-200 transition-colors">
+              <div key={i} className="bg-[#0a0a0a] border border-[#1f2937] rounded-xl p-4 hover:border-[#00ff41]/40 transition-all group">
                 <div className="flex items-start gap-2 mb-1.5 flex-wrap">
-                  <span className={`text-xs font-semibold px-2 py-0.5 rounded-full capitalize ${PRIORITY_COLORS[rec.priority] ?? PRIORITY_COLORS.low}`}>
+                  <span className={`text-[10px] uppercase font-bold px-2 py-0.5 rounded-full ${PRIORITY_COLORS[rec.priority] ?? PRIORITY_COLORS.low}`}>
                     {rec.priority}
                   </span>
-                  <span className="text-xs px-2 py-0.5 rounded-full bg-slate-100 text-slate-500 capitalize">
+                  <span className="text-[10px] uppercase font-bold px-2 py-0.5 rounded-full bg-[#1f2937] text-[#6b7280]">
                     {rec.category.replace(/_/g, ' ')}
                   </span>
-                  <span className={`text-xs px-2 py-0.5 rounded-full capitalize ml-auto ${EFFORT_COLORS[rec.effort] ?? EFFORT_COLORS.medium}`}>
+                  <span className={`text-[10px] uppercase font-bold px-2 py-0.5 rounded-full ml-auto ${EFFORT_COLORS[rec.effort] ?? EFFORT_COLORS.medium}`}>
                     {rec.effort} effort
                   </span>
                 </div>
-                <div className="font-semibold text-slate-800 text-sm mb-1">{rec.title}</div>
-                <div className="text-xs text-slate-500 leading-relaxed">{rec.detail}</div>
+                <div className="font-semibold text-[#e2e8f0] group-hover:text-[#00ff41] text-sm mb-1 transition-colors">{rec.title}</div>
+                <div className="text-xs text-[#6b7280] leading-relaxed">{rec.detail}</div>
               </div>
             ))}
           </div>
           {recommendations.length > 3 && (
             <button
               onClick={() => setShowAllRec(v => !v)}
-              className="mt-3 flex items-center gap-1 text-xs text-amber-600 hover:text-amber-700 font-medium"
+              className="mt-3 flex items-center gap-1 text-xs text-[#00ff41] hover:text-[#00cc33] font-medium transition-colors"
             >
               {showAllRec ? (
                 <><ChevronUp size={14} /> Show less</>
               ) : (
-                <><ChevronDown size={14} /> Show all {recommendations.length} recommendations</>
+                <><ChevronDown size={14} /> Show all {recommendations.length} items</>
               )}
             </button>
           )}
@@ -424,49 +424,49 @@ export default function AmazonAdsPage() {
       )}
 
       {/* ── 4. Keyword Performance Table ─────────────────────────────── */}
-      <div className="bg-white border border-slate-200 rounded-xl p-5">
+      <div className="bg-[#111827] border border-[#1f2937] rounded-xl p-5">
         <div className="flex items-center gap-2 mb-4">
-          <Tag size={16} className="text-amber-400" />
-          <h2 className="font-semibold text-slate-900">Keyword Performance</h2>
-          <span className="ml-auto text-xs text-slate-400">{keywords.length} keywords</span>
+          <Tag size={16} className="text-[#00ff41]" />
+          <h2 className="font-semibold text-white">Keyword Performance</h2>
+          <span className="ml-auto text-xs text-[#6b7280] font-mono">{keywords.length} nodes</span>
         </div>
         {keywords.length === 0 ? (
-          <p className="text-sm text-slate-400 text-center py-6">No keywords yet — awaiting sync.</p>
+          <p className="text-sm text-[#6b7280] text-center py-6 font-mono">No keyword data found.</p>
         ) : (
           <div className="overflow-x-auto">
             <table className="w-full text-sm min-w-[600px]">
               <thead>
-                <tr className="border-b border-slate-100">
+                <tr className="border-b border-[#1f2937]">
                   {['Keyword', 'Match', 'Status', 'Clicks', 'Spend', 'Sales', 'ACoS'].map(h => (
-                    <th key={h} className="text-left text-xs text-slate-400 font-medium pb-2 pr-4">{h}</th>
+                    <th key={h} className="text-left text-xs text-[#6b7280] font-medium pb-2 pr-4 uppercase tracking-wider">{h}</th>
                   ))}
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-50">
+              <tbody className="divide-y divide-[#1f2937]">
                 {keywords.map((kw, i) => (
-                  <tr key={i} className="hover:bg-slate-50/50 transition-colors">
+                  <tr key={i} className="hover:bg-[#0f1117] transition-colors group">
                     <td className="py-3 pr-4">
-                      <div className="font-medium text-slate-800">{kw.term}</div>
+                      <div className="font-medium text-[#e2e8f0] group-hover:text-white transition-colors">{kw.term}</div>
                       {kw.reason && (
-                        <div className="text-xs text-slate-400 mt-0.5 leading-snug">{kw.reason}</div>
+                        <div className="text-[10px] text-[#6b7280] mt-0.5 leading-snug font-mono uppercase opacity-70">{kw.reason}</div>
                       )}
                     </td>
                     <td className="py-3 pr-4">
-                      <span className="text-xs bg-slate-100 text-slate-500 px-2 py-0.5 rounded capitalize">
+                      <span className="text-[10px] bg-[#1f2937] text-[#6b7280] px-2 py-0.5 rounded-full font-bold uppercase tracking-tighter">
                         {kw.matchType ?? '—'}
                       </span>
                     </td>
                     <td className="py-3 pr-4">
-                      <span className={`text-xs px-2 py-0.5 rounded-full font-medium capitalize ${
-                        kw.status === 'active' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-600'
+                      <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold uppercase tracking-tighter ${
+                        kw.status === 'active' ? 'bg-[#003d0f] text-[#00ff41]' : 'bg-red-950/30 text-red-400'
                       }`}>
                         {kw.status ?? '—'}
                       </span>
                     </td>
-                    <td className="py-3 pr-4 text-slate-600">{fmtNum(kw.clicks)}</td>
-                    <td className="py-3 pr-4 text-slate-600">{fmt$(kw.spend)}</td>
-                    <td className="py-3 pr-4 text-slate-600">{fmt$(kw.sales)}</td>
-                    <td className={`py-3 font-medium ${acosColor(kw.acos)}`}>{fmtPct(kw.acos)}</td>
+                    <td className="py-3 pr-4 text-[#6b7280] font-mono">{fmtNum(kw.clicks)}</td>
+                    <td className="py-3 pr-4 text-[#6b7280] font-mono">{fmt$(kw.spend)}</td>
+                    <td className="py-3 pr-4 text-[#6b7280] font-mono">{fmt$(kw.sales)}</td>
+                    <td className={`py-3 font-bold font-mono ${acosColor(kw.acos)}`}>{fmtPct(kw.acos)}</td>
                   </tr>
                 ))}
               </tbody>
@@ -477,32 +477,32 @@ export default function AmazonAdsPage() {
 
       {/* ── 5. Competitor Watchlist ───────────────────────────────────── */}
       {competitorWatchlist.length > 0 && (
-        <div className="bg-white border border-slate-200 rounded-xl p-5">
+        <div className="bg-[#111827] border border-[#1f2937] rounded-xl p-5">
           <div className="flex items-center gap-2 mb-4">
-            <BookOpen size={16} className="text-amber-400" />
-            <h2 className="font-semibold text-slate-900">Competitor Watchlist</h2>
+            <BookOpen size={16} className="text-[#00ff41]" />
+            <h2 className="font-semibold text-white">Competitor Watchlist</h2>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-slate-100">
+                <tr className="border-b border-[#1f2937]">
                   {['Book', 'Author', 'ASIN', 'Targeting'].map(h => (
-                    <th key={h} className="text-left text-xs text-slate-400 font-medium pb-2 pr-4">{h}</th>
+                    <th key={h} className="text-left text-xs text-[#6b7280] font-medium pb-2 pr-4 uppercase tracking-wider">{h}</th>
                   ))}
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-50">
+              <tbody className="divide-y divide-[#1f2937]">
                 {competitorWatchlist.map((c, i) => (
-                  <tr key={i} className="hover:bg-slate-50/50 transition-colors">
-                    <td className="py-2.5 pr-4 font-medium text-slate-800">{c.title}</td>
-                    <td className="py-2.5 pr-4 text-slate-500">{c.author}</td>
+                  <tr key={i} className="hover:bg-[#0f1117] transition-colors group">
+                    <td className="py-2.5 pr-4 font-medium text-[#e2e8f0] group-hover:text-white transition-colors">{c.title}</td>
+                    <td className="py-2.5 pr-4 text-[#6b7280]">{c.author}</td>
                     <td className="py-2.5 pr-4">
                       {c.asin ? (
                         <a
                           href={`https://www.amazon.com/dp/${c.asin}`}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-1 text-amber-600 hover:text-amber-700 font-mono text-xs"
+                          className="flex items-center gap-1 text-[#00ff41] hover:text-[#00cc33] font-mono text-xs"
                         >
                           {c.asin}
                           <ExternalLink size={11} />
@@ -510,7 +510,7 @@ export default function AmazonAdsPage() {
                       ) : '—'}
                     </td>
                     <td className="py-2.5">
-                      <span className={`text-xs px-2 py-0.5 rounded-full font-medium capitalize ${
+                      <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold uppercase tracking-tighter ${
                         TARGETING_COLORS[c.targeting ?? ''] ?? TARGETING_COLORS.pending
                       }`}>
                         {c.targeting ?? 'pending'}
@@ -526,33 +526,33 @@ export default function AmazonAdsPage() {
 
       {/* ── 6. Optimization Log ──────────────────────────────────────── */}
       {sortedLog.length > 0 && (
-        <div className="bg-white border border-slate-200 rounded-xl p-5">
+        <div className="bg-[#111827] border border-[#1f2937] rounded-xl p-5">
           <div className="flex items-center gap-2 mb-4">
-            <Clock size={16} className="text-amber-400" />
-            <h2 className="font-semibold text-slate-900">Optimization Log</h2>
+            <Clock size={16} className="text-[#00ff41]" />
+            <h2 className="font-semibold text-white">Optimization Log</h2>
           </div>
           <div className="space-y-3">
             {sortedLog.map((entry, i) => (
               <div key={i} className="flex items-start gap-3">
                 <div className="flex flex-col items-center">
-                  <div className="w-2 h-2 rounded-full bg-amber-300 mt-1.5 shrink-0" />
+                  <div className="w-2 h-2 rounded-full bg-[#00ff41] mt-1.5 shrink-0 shadow-[0_0_8px_rgba(0,255,65,0.4)]" />
                   {i < sortedLog.length - 1 && (
-                    <div className="w-px flex-1 bg-slate-100 mt-1" style={{ minHeight: 20 }} />
+                    <div className="w-px flex-1 bg-[#1f2937] mt-1" style={{ minHeight: 20 }} />
                   )}
                 </div>
                 <div className="pb-3 flex-1 min-w-0">
                   <div className="flex items-center gap-2 flex-wrap mb-1">
-                    <span className="text-xs text-slate-400">{entry.date}</span>
-                    <span className={`text-xs px-2 py-0.5 rounded-full font-medium capitalize ${
-                      LOG_TYPE_COLORS[entry.type] ?? 'bg-slate-100 text-slate-500'
+                    <span className="text-xs text-[#6b7280] font-mono">{entry.date}</span>
+                    <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold uppercase tracking-tighter ${
+                      LOG_TYPE_COLORS[entry.type] ?? 'bg-[#1f2937] text-[#6b7280]'
                     }`}>
                       {entry.type.replace(/_/g, ' ')}
                     </span>
                     {entry.impact && entry.impact !== 'pending' && (
-                      <span className="text-xs text-slate-500 italic">{entry.impact}</span>
+                      <span className="text-xs text-[#6b7280] italic opacity-70 font-mono text-[10px] uppercase">{entry.impact}</span>
                     )}
                   </div>
-                  <p className="text-sm text-slate-700">{entry.detail}</p>
+                  <p className="text-sm text-[#e2e8f0]">{entry.detail}</p>
                 </div>
               </div>
             ))}
@@ -562,105 +562,105 @@ export default function AmazonAdsPage() {
 
       {/* ── 7. Performance History ───────────────────────────────────── */}
       {sortedHistory.length > 0 && (
-        <div className="bg-white border border-slate-200 rounded-xl p-5">
+        <div className="bg-[#111827] border border-[#1f2937] rounded-xl p-5">
           <div className="flex items-center gap-2 mb-4">
-            <TrendingUp size={16} className="text-amber-400" />
-            <h2 className="font-semibold text-slate-900">Performance History</h2>
+            <TrendingUp size={16} className="text-[#00ff41]" />
+            <h2 className="font-semibold text-white">Performance History</h2>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-slate-100">
+                <tr className="border-b border-[#1f2937]">
                   {['Date', 'Spend', 'Sales', 'ACoS', 'Units', 'Note'].map(h => (
-                    <th key={h} className="text-left text-xs text-slate-400 font-medium pb-2 pr-4">{h}</th>
+                    <th key={h} className="text-left text-xs text-[#6b7280] font-medium pb-2 pr-4 uppercase tracking-wider">{h}</th>
                   ))}
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-50">
+              <tbody className="divide-y divide-[#1f2937]">
                 {sortedHistory.map((row, i) => (
-                  <tr key={i} className="hover:bg-slate-50/50">
-                    <td className="py-2.5 pr-4 font-medium text-slate-700">{row.date}</td>
-                    <td className="py-2.5 pr-4 text-slate-600">{fmt$(row.spend)}</td>
-                    <td className="py-2.5 pr-4 text-slate-600">{fmt$(row.sales)}</td>
-                    <td className={`py-2.5 pr-4 font-medium ${acosColor(row.acos)}`}>{fmtPct(row.acos)}</td>
-                    <td className="py-2.5 pr-4 text-slate-600">{fmtNum(row.unitsAttributed)}</td>
-                    <td className="py-2.5 text-xs text-slate-400 italic">{row.note ?? '—'}</td>
+                  <tr key={i} className="hover:bg-[#0f1117] transition-colors">
+                    <td className="py-2.5 pr-4 font-medium text-[#e2e8f0] font-mono">{row.date}</td>
+                    <td className="py-2.5 pr-4 text-[#6b7280] font-mono">{fmt$(row.spend)}</td>
+                    <td className="py-2.5 pr-4 text-[#6b7280] font-mono">{fmt$(row.sales)}</td>
+                    <td className={`py-2.5 pr-4 font-bold font-mono ${acosColor(row.acos)}`}>{fmtPct(row.acos)}</td>
+                    <td className="py-2.5 pr-4 text-[#6b7280] font-mono">{fmtNum(row.unitsAttributed)}</td>
+                    <td className="py-2.5 text-xs text-[#6b7280] italic">{row.note ?? '—'}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
           {sortedHistory.length < 2 && (
-            <p className="text-xs text-slate-400 mt-3 text-center">More history will appear as weekly data accumulates.</p>
+            <p className="text-[10px] text-[#6b7280] mt-3 text-center uppercase font-mono tracking-widest">Awaiting historical data accumulation…</p>
           )}
         </div>
       )}
 
       {/* ── 8. Breakeven Calculator ──────────────────────────────────── */}
-      <div className="bg-white border border-slate-200 rounded-xl overflow-hidden">
+      <div className="bg-[#111827] border border-[#1f2937] rounded-xl overflow-hidden">
         <button
           onClick={() => setCalcOpen(v => !v)}
-          className="w-full flex items-center justify-between px-5 py-4 text-left hover:bg-slate-50 transition-colors"
+          className="w-full flex items-center justify-between px-5 py-4 text-left hover:bg-[#1f2937] transition-all"
         >
           <div className="flex items-center gap-2">
-            <BarChart2 size={16} className="text-amber-400" />
-            <span className="font-semibold text-slate-900">Breakeven Calculator</span>
+            <BarChart2 size={16} className="text-[#00ff41]" />
+            <span className="font-semibold text-white">Profitability Calculator</span>
             {calcBE != null && (
-              <span className="text-xs text-slate-400 font-normal">
-                Breakeven: {calcBE.toFixed(1)}%
+              <span className="text-xs text-[#6b7280] font-mono ml-2 border-l border-[#1f2937] pl-2 uppercase">
+                BE: {calcBE.toFixed(1)}%
               </span>
             )}
           </div>
-          {calcOpen ? <ChevronUp size={16} className="text-slate-400" /> : <ChevronDown size={16} className="text-slate-400" />}
+          {calcOpen ? <ChevronUp size={16} className="text-[#6b7280]" /> : <ChevronDown size={16} className="text-[#6b7280]" />}
         </button>
 
         {calcOpen && (
-          <div className="px-5 pb-5 border-t border-slate-100">
-            <p className="text-xs text-slate-400 mt-4 mb-4">
-              Breakeven ACoS = Royalty ÷ Price × 100. At this ACoS, ads break even — each sale covers its own cost.
+          <div className="px-5 pb-5 border-t border-[#1f2937] bg-[#0a0a0a]/40">
+            <p className="text-[10px] text-[#6b7280] mt-4 mb-4 uppercase font-mono tracking-wider">
+              Calculation: (Royalty ÷ Price) × 100. Determines zero-sum ad cost.
             </p>
             <div className="grid grid-cols-2 gap-4 mb-4">
               <div>
-                <label className="text-xs font-medium text-slate-500 block mb-1.5">Book Price ($)</label>
+                <label className="text-xs font-medium text-[#6b7280] block mb-1.5 uppercase font-mono tracking-tighter">Market Price ($)</label>
                 <input
                   type="number"
                   value={calcPrice}
                   onChange={e => setCalcPrice(e.target.value)}
                   placeholder="18.99"
-                  className="w-full border border-slate-200 rounded-lg px-3 py-2 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-amber-300"
+                  className="w-full bg-[#0a0a0a] border border-[#1f2937] rounded-lg px-3 py-2 text-sm text-white font-mono focus:outline-none focus:ring-2 focus:ring-[#00ff41]/30 focus:border-[#00ff41]"
                 />
               </div>
               <div>
-                <label className="text-xs font-medium text-slate-500 block mb-1.5">Royalty per Sale ($)</label>
+                <label className="text-xs font-medium text-[#6b7280] block mb-1.5 uppercase font-mono tracking-tighter">Net Royalty ($)</label>
                 <input
                   type="number"
                   value={calcRoyalty}
                   onChange={e => setCalcRoyalty(e.target.value)}
                   placeholder="6.00"
-                  className="w-full border border-slate-200 rounded-lg px-3 py-2 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-amber-300"
+                  className="w-full bg-[#0a0a0a] border border-[#1f2937] rounded-lg px-3 py-2 text-sm text-white font-mono focus:outline-none focus:ring-2 focus:ring-[#00ff41]/30 focus:border-[#00ff41]"
                 />
               </div>
             </div>
             {calcBE != null ? (
-              <div className="bg-amber-50 border border-amber-200 rounded-xl p-4">
-                <div className="text-lg font-bold text-amber-700 mb-1">
-                  Breakeven ACoS: {calcBE.toFixed(1)}%
+              <div className="bg-[#003d0f]/20 border border-[#00ff41]/30 rounded-xl p-4">
+                <div className="text-lg font-bold text-[#00ff41] mb-1 font-mono">
+                  Breakeven Point: {calcBE.toFixed(1)}%
                 </div>
                 {metrics.acos != null && (
-                  <div className="text-sm text-amber-700">
-                    Your current ACoS ({fmtPct(metrics.acos)}) is{' '}
-                    <span className="font-semibold">
-                      {(metrics.acos / calcBE).toFixed(1)}× your breakeven
+                  <div className="text-sm text-[#00ff41] opacity-90">
+                    Current ACoS ({fmtPct(metrics.acos)}) is{' '}
+                    <span className="font-bold underline">
+                      {(metrics.acos / calcBE).toFixed(1)}×
                     </span>
                     {metrics.acos > calcBE
-                      ? ' — ads are not yet profitable.'
-                      : ' — ads are profitable.'}
+                      ? ' the threshold. Net loss per ad sale.'
+                      : ' the threshold. Generating profit.'}
                   </div>
                 )}
               </div>
             ) : (
-              <div className="text-sm text-slate-400 text-center py-3">
-                Enter both values to calculate.
+              <div className="text-xs text-[#6b7280] text-center py-3 font-mono uppercase">
+                Input market variables to execute calculation.
               </div>
             )}
           </div>

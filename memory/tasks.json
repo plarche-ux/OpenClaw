@@ -44,6 +44,27 @@
       "name": "Neo",
       "emoji": "🕶️",
       "role": "primary-agent"
+    },
+    {
+      "id": "trinity",
+      "name": "Trinity",
+      "emoji": "📚",
+      "role": "book-agent",
+      "description": "Content & Promotion Specialist"
+    },
+    {
+      "id": "niobe",
+      "name": "Niobe",
+      "emoji": "🔍",
+      "role": "research-agent",
+      "description": "Intelligence & Opportunity Scout"
+    },
+    {
+      "id": "link",
+      "name": "Link",
+      "emoji": "⚙️",
+      "role": "dev-agent",
+      "description": "Code & Technical Projects"
     }
   ],
   "tasks": [
@@ -80,7 +101,7 @@
       "id": "t-003",
       "title": "Get fresh Perplexity API key",
       "description": "Current key returns 401. Get new key from perplexity.ai/settings/api",
-      "status": "in_progress",
+      "status": "done",
       "priority": "medium",
       "project": "general",
       "assignee": "paul",
@@ -88,7 +109,7 @@
         "api-keys"
       ],
       "createdAt": "2026-02-23T00:00:00Z",
-      "updatedAt": "2026-02-23T18:54:21.621Z"
+      "updatedAt": "2026-02-24T23:38:04.442Z"
     },
     {
       "id": "t-004",
@@ -180,7 +201,7 @@
       "id": "t-010",
       "title": "Full paullarche.com site audit + rebuild plan",
       "description": "6 marketing gaps already identified. Paul open to full rebuild. Run subagent audit (Gemini 3.1).",
-      "status": "in_progress",
+      "status": "backlog",
       "priority": "medium",
       "project": "website",
       "assignee": "neo",
@@ -188,7 +209,7 @@
         "audit"
       ],
       "createdAt": "2026-02-23T00:00:00Z",
-      "updatedAt": "2026-02-23T18:54:11.752Z"
+      "updatedAt": "2026-02-24T23:09:54.551Z"
     }
   ]
 }

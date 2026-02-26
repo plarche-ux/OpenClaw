@@ -37,3 +37,5 @@ node_modules/
 # !skills/
 # !MEMORY.md
 backups/openclaw.json.bak
+backups/openclaw.json.*
+backups/openclaw.json.*

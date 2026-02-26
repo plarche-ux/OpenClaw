@@ -41,6 +41,17 @@ Every few days (during heartbeats): review recent daily files, distill anything 
 - `trash` > `rm` — recoverable beats gone forever
 - When in doubt, ask.
 
+## ⚠️ Config Change Safety (MANDATORY)
+
+**Before editing `openclaw.json` OR running any gateway restart command:**
+1. Run `~/.openclaw/workspace/scripts/backup-openclaw-config.sh` first
+2. Confirm backup succeeded before proceeding
+3. Use `openclaw gateway stop && sleep 2 && openclaw gateway start` — NEVER `openclaw gateway restart`
+4. Full procedure: read `skills/config-safety/SKILL.md`
+
+**To restore a backup:** `~/.openclaw/workspace/scripts/restore-openclaw-config.sh`
+**Emergency (gateway down):** `cat ~/Desktop/RESTORE.txt`
+
 ## External vs Internal
 
 **Do freely:** read files, search the web, check calendars, work within the workspace.

@@ -12,7 +12,7 @@
       "showStats": "Top 2% globally | 9,184 YouTube subs | 2M+ views | 59 Apple reviews",
       "showUrl": "https://salespop.net",
       "youtubeUrl": "https://www.youtube.com/@SalesPOP",
-      "status": "upcoming",
+      "status": "completed",
       "date": "2026-02-24",
       "time": "17:30",
       "timezone": "ET",
@@ -52,6 +52,7 @@
       },
       "postShow": {
         "recordingUrl": "",
+        "estimatedReleaseDate": "~2026-03-17",
         "critiqueDate": "",
         "scores": {
           "frameworkClarity": null,
@@ -61,7 +62,7 @@
           "bookClose": null
         },
         "topImprovements": [],
-        "notes": ""
+        "notes": "Paul reported it went well. MOCHA was prepped but didn't come up — good to have in reserve. Critique pending — no recording link yet."
       }
     },
     {

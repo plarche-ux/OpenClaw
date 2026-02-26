@@ -1,24 +1,151 @@
 @import "tailwindcss";
 
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+:root {
+  /* Matrix Theme Colors */
+  --color-matrix: #00ff41;
+  --color-matrix-dim: #00cc33;
+  --color-matrix-dark: #003d0f;
+  --color-matrix-glow: rgba(0, 255, 65, 0.15);
+  --color-bg-primary: #0a0a0a;
+  --color-bg-surface: #111827;
+  --color-bg-elevated: #0f1117;
+  --color-text-primary: #ffffff;
+  --color-text-body: #e2e8f0;
+  --color-text-muted: #6b7280;
+  --color-border-subtle: #1f2937;
 }
 
-/* Markdown prose styles */
-.prose h1 { font-size: 1.5rem; font-weight: 700; margin: 1.25rem 0 0.5rem; }
-.prose h2 { font-size: 1.25rem; font-weight: 600; margin: 1rem 0 0.4rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.25rem; }
-.prose h3 { font-size: 1.1rem; font-weight: 600; margin: 0.85rem 0 0.3rem; }
-.prose p { margin: 0.5rem 0; line-height: 1.7; }
-.prose ul { list-style: disc; padding-left: 1.5rem; margin: 0.5rem 0; }
-.prose ol { list-style: decimal; padding-left: 1.5rem; margin: 0.5rem 0; }
-.prose li { margin: 0.2rem 0; line-height: 1.6; }
-.prose code { background: #f1f5f9; padding: 0.1em 0.3em; border-radius: 3px; font-size: 0.85em; font-family: 'Menlo', 'Monaco', monospace; }
-.prose pre { background: #1e293b; color: #e2e8f0; padding: 1rem; border-radius: 8px; overflow-x: auto; margin: 0.75rem 0; }
-.prose pre code { background: none; padding: 0; color: inherit; font-size: 0.85rem; }
-.prose blockquote { border-left: 3px solid #fbbf24; padding-left: 1rem; color: #64748b; margin: 0.5rem 0; }
-.prose a { color: #2563eb; text-decoration: underline; }
-.prose strong { font-weight: 600; }
-.prose hr { border: none; border-top: 1px solid #e2e8f0; margin: 1rem 0; }
-.prose table { width: 100%; border-collapse: collapse; margin: 0.75rem 0; }
-.prose th { background: #f8fafc; font-weight: 600; padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0; text-align: left; }
-.prose td { padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0; }
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-body);
+}
+
+/* Matrix scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-matrix-dark);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-matrix-dim);
+}
+
+/* Markdown prose styles - Matrix themed */
+.prose h1 { 
+  font-size: 1.5rem; 
+  font-weight: 700; 
+  margin: 1.25rem 0 0.5rem; 
+  color: var(--color-text-primary);
+}
+.prose h2 { 
+  font-size: 1.25rem; 
+  font-weight: 600; 
+  margin: 1rem 0 0.4rem; 
+  border-bottom: 1px solid var(--color-border-subtle); 
+  padding-bottom: 0.25rem;
+  color: var(--color-text-primary);
+}
+.prose h3 { 
+  font-size: 1.1rem; 
+  font-weight: 600; 
+  margin: 0.85rem 0 0.3rem;
+  color: var(--color-text-primary);
+}
+.prose p { 
+  margin: 0.5rem 0; 
+  line-height: 1.7;
+  color: var(--color-text-body);
+}
+.prose ul { 
+  list-style: disc; 
+  padding-left: 1.5rem; 
+  margin: 0.5rem 0; 
+}
+.prose ol { 
+  list-style: decimal; 
+  padding-left: 1.5rem; 
+  margin: 0.5rem 0; 
+}
+.prose li { 
+  margin: 0.2rem 0; 
+  line-height: 1.6;
+  color: var(--color-text-body);
+}
+.prose code { 
+  background: var(--color-bg-surface); 
+  padding: 0.1em 0.3em; 
+  border-radius: 3px; 
+  font-size: 0.85em; 
+  font-family: 'Menlo', 'Monaco', monospace;
+  color: var(--color-matrix);
+  border: 1px solid var(--color-matrix-dark);
+}
+.prose pre { 
+  background: var(--color-bg-surface); 
+  color: var(--color-text-body); 
+  padding: 1rem; 
+  border-radius: 8px; 
+  overflow-x: auto; 
+  margin: 0.75rem 0;
+  border: 1px solid var(--color-border-subtle);
+}
+.prose pre code { 
+  background: none; 
+  padding: 0; 
+  color: inherit; 
+  font-size: 0.85rem;
+  border: none;
+}
+.prose blockquote { 
+  border-left: 3px solid var(--color-matrix); 
+  padding-left: 1rem; 
+  color: var(--color-text-muted); 
+  margin: 0.5rem 0; 
+}
+.prose a { 
+  color: var(--color-matrix); 
+  text-decoration: underline; 
+}
+.prose strong { 
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+.prose hr { 
+  border: none; 
+  border-top: 1px solid var(--color-border-subtle); 
+  margin: 1rem 0; 
+}
+.prose table { 
+  width: 100%; 
+  border-collapse: collapse; 
+  margin: 0.75rem 0; 
+}
+.prose th { 
+  background: var(--color-bg-surface); 
+  font-weight: 600; 
+  padding: 0.5rem 0.75rem; 
+  border: 1px solid var(--color-border-subtle); 
+  text-align: left;
+  color: var(--color-text-primary);
+}
+.prose td { 
+  padding: 0.5rem 0.75rem; 
+  border: 1px solid var(--color-border-subtle);
+  color: var(--color-text-body);
+}
+
+/* Selection color */
+::selection {
+  background: var(--color-matrix-dark);
+  color: var(--color-matrix);
+}

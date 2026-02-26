@@ -44,8 +44,8 @@ const COLUMNS: { id: Task['status']; label: string }[] = [
 
 const PRIORITY_DOT: Record<string, string> = {
   high: 'bg-red-500',
-  medium: 'bg-amber-400',
-  low: 'bg-slate-400',
+  medium: 'bg-[#00ff41]',
+  low: 'bg-[#6b7280]',
 }
 
 const PRIORITY_LABEL: Record<string, string> = {
@@ -201,7 +201,7 @@ export default function TasksPage() {
 
   if (!data) {
     return (
-      <div className="flex items-center justify-center h-64 text-slate-400 text-sm">Loading…</div>
+      <div className="flex items-center justify-center h-64 text-[#6b7280] text-sm">Loading…</div>
     )
   }
 
@@ -227,22 +227,22 @@ export default function TasksPage() {
     <div>
       {/* Header */}
       <div className="flex items-center gap-2 mb-2">
-        <CheckSquare size={22} className="text-amber-400" />
-        <h1 className="text-2xl font-bold text-slate-900">Tasks</h1>
+        <CheckSquare size={22} className="text-[#00ff41]" />
+        <h1 className="text-2xl font-bold text-white">Tasks</h1>
       </div>
-      <p className="text-slate-400 text-sm mb-6">Kanban board — all projects</p>
+      <p className="text-[#6b7280] text-sm mb-6">Kanban board — all projects</p>
 
       {/* Stats bar */}
       <div className="grid grid-cols-4 gap-3 mb-6">
         {[
-          { label: 'Total', value: total, color: 'text-slate-700' },
-          { label: 'In Progress', value: inProgress, color: 'text-amber-600' },
-          { label: 'Done', value: done, color: 'text-green-600' },
-          { label: 'Complete', value: `${pct}%`, color: 'text-indigo-600' },
+          { label: 'Total', value: total, color: 'text-white' },
+          { label: 'In Progress', value: inProgress, color: 'text-[#00ff41]' },
+          { label: 'Done', value: done, color: 'text-green-500' },
+          { label: 'Complete', value: `${pct}%`, color: 'text-blue-400' },
         ].map(s => (
-          <div key={s.label} className="bg-white border border-slate-200 rounded-xl px-4 py-3">
-            <div className={`text-2xl font-bold ${s.color}`}>{s.value}</div>
-            <div className="text-xs text-slate-400 mt-0.5">{s.label}</div>
+          <div key={s.label} className="bg-[#111827] border border-[#1f2937] rounded-xl px-4 py-3 hover:border-[#00ff41]/30 transition-all">
+            <div className={`text-2xl font-bold ${s.color} font-mono`}>{s.value}</div>
+            <div className="text-xs text-[#6b7280] mt-0.5">{s.label}</div>
           </div>
         ))}
       </div>
@@ -250,11 +250,11 @@ export default function TasksPage() {
       {/* Filter bar */}
       <div className="flex gap-3 mb-6 flex-wrap">
         <div className="flex gap-2 items-center flex-wrap">
-          <span className="text-xs text-slate-400 font-medium">Assignee:</span>
+          <span className="text-xs text-[#6b7280] font-medium">Assignee:</span>
           <button
             onClick={() => setFilterAssignee('')}
             className={`text-xs px-3 py-1 rounded-full border transition-colors ${
-              filterAssignee === '' ? 'bg-amber-400 border-amber-400 text-white font-semibold' : 'border-slate-200 text-slate-500 hover:border-amber-300'
+              filterAssignee === '' ? 'bg-[#00ff41] border-[#00ff41] text-[#0a0a0a] font-semibold' : 'border-[#1f2937] text-[#6b7280] hover:border-[#00ff41]/50'
             }`}
           >
             All
@@ -264,7 +264,7 @@ export default function TasksPage() {
               key={a.id}
               onClick={() => setFilterAssignee(filterAssignee === a.id ? '' : a.id)}
               className={`text-xs px-3 py-1 rounded-full border transition-colors ${
-                filterAssignee === a.id ? 'bg-amber-400 border-amber-400 text-white font-semibold' : 'border-slate-200 text-slate-500 hover:border-amber-300'
+                filterAssignee === a.id ? 'bg-[#00ff41] border-[#00ff41] text-[#0a0a0a] font-semibold' : 'border-[#1f2937] text-[#6b7280] hover:border-[#00ff41]/50'
               }`}
             >
               {a.emoji} {a.name}
@@ -272,11 +272,11 @@ export default function TasksPage() {
           ))}
         </div>
         <div className="flex gap-2 items-center ml-auto">
-          <span className="text-xs text-slate-400 font-medium">Project:</span>
+          <span className="text-xs text-[#6b7280] font-medium">Project:</span>
           <select
             value={filterProject}
             onChange={e => setFilterProject(e.target.value)}
-            className="text-xs border border-slate-200 rounded-lg px-3 py-1.5 text-slate-600 bg-white focus:outline-none focus:ring-2 focus:ring-amber-300"
+            className="text-xs border border-[#1f2937] rounded-lg px-3 py-1.5 text-[#e2e8f0] bg-[#111827] focus:outline-none focus:ring-2 focus:ring-[#00ff41]/30 focus:border-[#00ff41]"
           >
             <option value="">All projects</option>
             {projects.map(p => (
@@ -296,14 +296,14 @@ export default function TasksPage() {
               {/* Column header */}
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <h2 className="text-xs font-semibold text-slate-500 uppercase tracking-wide">{col.label}</h2>
-                  <span className="bg-slate-100 text-slate-500 text-xs px-2 py-0.5 rounded-full font-medium">
+                  <h2 className="text-xs font-semibold text-[#6b7280] uppercase tracking-wide">{col.label}</h2>
+                  <span className="bg-[#1f2937] text-[#6b7280] text-xs px-2 py-0.5 rounded-full font-medium">
                     {colTasks.length}
                   </span>
                 </div>
                 <button
                   onClick={() => openAdd(col.id)}
-                  className="text-slate-400 hover:text-amber-500 transition-colors"
+                  className="text-[#6b7280] hover:text-[#00ff41] transition-colors"
                   title={`Add to ${col.label}`}
                 >
                   <Plus size={16} />
@@ -313,7 +313,7 @@ export default function TasksPage() {
               {/* Cards drop zone */}
               <div
                 className={`flex flex-col gap-2 min-h-[120px] rounded-xl transition-colors p-1 -m-1 ${
-                  isOver ? 'bg-amber-50 ring-2 ring-amber-300 ring-inset' : ''
+                  isOver ? 'bg-[#003d0f]/30 ring-2 ring-[#00ff41]/50 ring-inset' : ''
                 }`}
                 onDragOver={e => handleDragOver(e, col.id)}
                 onDragLeave={handleDragLeave}
@@ -321,9 +321,9 @@ export default function TasksPage() {
               >
                 {colTasks.length === 0 && (
                   <div className={`border-2 border-dashed rounded-xl h-20 flex items-center justify-center transition-colors ${
-                    isOver ? 'border-amber-300' : 'border-slate-100'
+                    isOver ? 'border-[#00ff41]/50' : 'border-[#1f2937]'
                   }`}>
-                    <span className="text-xs text-slate-300">{isOver ? 'Drop here' : 'Empty'}</span>
+                    <span className="text-xs text-[#6b7280]">{isOver ? 'Drop here' : 'Empty'}</span>
                   </div>
                 )}
                 {colTasks.map(task => {
@@ -337,20 +337,20 @@ export default function TasksPage() {
                       onDragStart={e => handleDragStart(e, task.id)}
                       onDragEnd={handleDragEnd}
                       onClick={() => openEdit(task)}
-                      className={`bg-white border rounded-xl p-3 cursor-grab active:cursor-grabbing hover:border-amber-300 hover:shadow-sm transition-all group select-none ${
-                        isDragging ? 'opacity-40 border-amber-300' : 'border-slate-200'
+                      className={`bg-[#111827] border rounded-xl p-3 cursor-grab active:cursor-grabbing hover:border-[#00ff41] hover:shadow-[0_0_10px_rgba(0,255,65,0.1)] transition-all group select-none ${
+                        isDragging ? 'opacity-40 border-[#00ff41]' : 'border-[#1f2937]'
                       }`}
                     >
                       <div className="flex items-start gap-2 mb-2">
-                        <GripVertical size={12} className="text-slate-200 mt-1 shrink-0 group-hover:text-slate-300 transition-colors" />
+                        <GripVertical size={12} className="text-[#1f2937] mt-1 shrink-0 group-hover:text-[#00ff41]/50 transition-colors" />
                         <span
                           className={`w-2 h-2 rounded-full mt-1 shrink-0 ${PRIORITY_DOT[task.priority]}`}
                           title={PRIORITY_LABEL[task.priority]}
                         />
-                        <span className="text-sm font-medium text-slate-800 leading-snug">{task.title}</span>
+                        <span className="text-sm font-medium text-white leading-snug">{task.title}</span>
                       </div>
                       {task.description && (
-                        <p className="text-xs text-slate-400 mb-2 line-clamp-1 pl-8">{task.description}</p>
+                        <p className="text-xs text-[#6b7280] mb-2 line-clamp-1 pl-8">{task.description}</p>
                       )}
                       <div className="flex items-center gap-1.5 flex-wrap pl-8">
                         {proj && (
@@ -362,12 +362,12 @@ export default function TasksPage() {
                           </span>
                         )}
                         {agent && (
-                          <span className="text-xs text-slate-400 ml-auto shrink-0">
+                          <span className="text-xs text-[#6b7280] ml-auto shrink-0">
                             {agent.emoji} {agent.name}
                           </span>
                         )}
                       </div>
-                      <div className="text-xs text-slate-300 mt-1.5 pl-8">{relativeDate(task.updatedAt)}</div>
+                      <div className="text-xs text-[#6b7280] mt-1.5 pl-8">{relativeDate(task.updatedAt)}</div>
                     </div>
                   )
                 })}
@@ -379,16 +379,16 @@ export default function TasksPage() {
 
       {/* Modal overlay */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black/40 z-50 flex items-center justify-center p-4" onClick={closeModals}>
+        <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4" onClick={closeModals}>
           <div
-            className="bg-white rounded-2xl shadow-2xl w-full max-w-md p-6"
+            className="bg-[#111827] rounded-2xl shadow-2xl w-full max-w-md p-6 border border-[#1f2937]"
             onClick={e => e.stopPropagation()}
           >
             <div className="flex items-center justify-between mb-5">
-              <h3 className="text-lg font-bold text-slate-900">
+              <h3 className="text-lg font-bold text-white">
                 {addModal.open ? `Add to ${COLUMNS.find(c => c.id === addModal.status)?.label}` : 'Edit Task'}
               </h3>
-              <button onClick={closeModals} className="text-slate-400 hover:text-slate-600">
+              <button onClick={closeModals} className="text-[#6b7280] hover:text-white transition-colors">
                 <X size={18} />
               </button>
             </div>
@@ -396,37 +396,37 @@ export default function TasksPage() {
             <div className="flex flex-col gap-4">
               {/* Title */}
               <div>
-                <label className="text-xs font-medium text-slate-500 mb-1 block">Title *</label>
+                <label className="text-xs font-medium text-[#6b7280] mb-1 block">Title *</label>
                 <input
                   type="text"
                   value={form.title}
                   onChange={e => setForm(f => ({ ...f, title: e.target.value }))}
                   placeholder="Task title"
-                  className="w-full border border-slate-200 rounded-lg px-3 py-2 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-amber-300"
+                  className="w-full border border-[#1f2937] rounded-lg px-3 py-2 text-sm text-white bg-[#0a0a0a] focus:outline-none focus:ring-2 focus:ring-[#00ff41]/30 focus:border-[#00ff41]"
                   autoFocus
                 />
               </div>
 
               {/* Description */}
               <div>
-                <label className="text-xs font-medium text-slate-500 mb-1 block">Description</label>
+                <label className="text-xs font-medium text-[#6b7280] mb-1 block">Description</label>
                 <textarea
                   value={form.description}
                   onChange={e => setForm(f => ({ ...f, description: e.target.value }))}
                   placeholder="Optional details"
                   rows={2}
-                  className="w-full border border-slate-200 rounded-lg px-3 py-2 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-amber-300 resize-none"
+                  className="w-full border border-[#1f2937] rounded-lg px-3 py-2 text-sm text-white bg-[#0a0a0a] focus:outline-none focus:ring-2 focus:ring-[#00ff41]/30 focus:border-[#00ff41] resize-none"
                 />
               </div>
 
               {/* Row: project + priority */}
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="text-xs font-medium text-slate-500 mb-1 block">Project</label>
+                  <label className="text-xs font-medium text-[#6b7280] mb-1 block">Project</label>
                   <select
                     value={form.project}
                     onChange={e => setForm(f => ({ ...f, project: e.target.value }))}
-                    className="w-full border border-slate-200 rounded-lg px-3 py-2 text-sm text-slate-700 bg-white focus:outline-none focus:ring-2 focus:ring-amber-300"
+                    className="w-full border border-[#1f2937] rounded-lg px-3 py-2 text-sm text-white bg-[#0a0a0a] focus:outline-none focus:ring-2 focus:ring-[#00ff41]/30 focus:border-[#00ff41]"
                   >
                     {projects.map(p => (
                       <option key={p.id} value={p.id}>{p.name}</option>
@@ -434,11 +434,11 @@ export default function TasksPage() {
                   </select>
                 </div>
                 <div>
-                  <label className="text-xs font-medium text-slate-500 mb-1 block">Priority</label>
+                  <label className="text-xs font-medium text-[#6b7280] mb-1 block">Priority</label>
                   <select
                     value={form.priority}
                     onChange={e => setForm(f => ({ ...f, priority: e.target.value as Task['priority'] }))}
-                    className="w-full border border-slate-200 rounded-lg px-3 py-2 text-sm text-slate-700 bg-white focus:outline-none focus:ring-2 focus:ring-amber-300"
+                    className="w-full border border-[#1f2937] rounded-lg px-3 py-2 text-sm text-white bg-[#0a0a0a] focus:outline-none focus:ring-2 focus:ring-[#00ff41]/30 focus:border-[#00ff41]"
                   >
                     <option value="high">High</option>
                     <option value="medium">Medium</option>
@@ -450,11 +450,11 @@ export default function TasksPage() {
               {/* Row: assignee + status */}
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="text-xs font-medium text-slate-500 mb-1 block">Assignee</label>
+                  <label className="text-xs font-medium text-[#6b7280] mb-1 block">Assignee</label>
                   <select
                     value={form.assignee}
                     onChange={e => setForm(f => ({ ...f, assignee: e.target.value }))}
-                    className="w-full border border-slate-200 rounded-lg px-3 py-2 text-sm text-slate-700 bg-white focus:outline-none focus:ring-2 focus:ring-amber-300"
+                    className="w-full border border-[#1f2937] rounded-lg px-3 py-2 text-sm text-white bg-[#0a0a0a] focus:outline-none focus:ring-2 focus:ring-[#00ff41]/30 focus:border-[#00ff41]"
                   >
                     <option value="">Unassigned</option>
                     {agents.map(a => (
@@ -463,11 +463,11 @@ export default function TasksPage() {
                   </select>
                 </div>
                 <div>
-                  <label className="text-xs font-medium text-slate-500 mb-1 block">Status</label>
+                  <label className="text-xs font-medium text-[#6b7280] mb-1 block">Status</label>
                   <select
                     value={form.status}
                     onChange={e => setForm(f => ({ ...f, status: e.target.value as Task['status'] }))}
-                    className="w-full border border-slate-200 rounded-lg px-3 py-2 text-sm text-slate-700 bg-white focus:outline-none focus:ring-2 focus:ring-amber-300"
+                    className="w-full border border-[#1f2937] rounded-lg px-3 py-2 text-sm text-white bg-[#0a0a0a] focus:outline-none focus:ring-2 focus:ring-[#00ff41]/30 focus:border-[#00ff41]"
                   >
                     {COLUMNS.map(c => (
                       <option key={c.id} value={c.id}>{c.label}</option>
@@ -479,7 +479,7 @@ export default function TasksPage() {
               {/* Move buttons (edit only) */}
               {editModal.open && editModal.task && (
                 <div>
-                  <label className="text-xs font-medium text-slate-500 mb-1.5 block">Move to column</label>
+                  <label className="text-xs font-medium text-[#6b7280] mb-1.5 block">Move to column</label>
                   <div className="flex gap-2 flex-wrap">
                     {COLUMNS.filter(c => c.id !== editModal.task!.status).map(c => (
                       <button
@@ -488,7 +488,7 @@ export default function TasksPage() {
                           await moveTask(editModal.task!, c.id)
                           closeModals()
                         }}
-                        className="flex items-center gap-1 text-xs px-3 py-1.5 rounded-lg border border-slate-200 text-slate-600 hover:border-amber-300 hover:text-amber-600 transition-colors"
+                        className="flex items-center gap-1 text-xs px-3 py-1.5 rounded-lg border border-[#1f2937] text-[#6b7280] hover:border-[#00ff41] hover:text-[#00ff41] transition-colors"
                       >
                         <ChevronRight size={12} />
                         {c.label}
@@ -504,7 +504,7 @@ export default function TasksPage() {
               {editModal.open && editModal.task && (
                 <button
                   onClick={() => deleteTask(editModal.task!.id)}
-                  className="text-red-400 hover:text-red-600 transition-colors mr-auto"
+                  className="text-red-400 hover:text-red-500 transition-colors mr-auto"
                   title="Delete task"
                 >
                   <Trash2 size={16} />
@@ -512,14 +512,14 @@ export default function TasksPage() {
               )}
               <button
                 onClick={closeModals}
-                className="px-4 py-2 text-sm text-slate-500 hover:text-slate-700 transition-colors ml-auto"
+                className="px-4 py-2 text-sm text-[#6b7280] hover:text-white transition-colors ml-auto"
               >
                 Cancel
               </button>
               <button
                 onClick={addModal.open ? saveNew : saveEdit}
                 disabled={!form.title.trim() || saving}
-                className="px-5 py-2 text-sm font-semibold bg-amber-400 hover:bg-amber-500 text-white rounded-lg transition-colors disabled:opacity-40"
+                className="px-5 py-2 text-sm font-semibold bg-[#00ff41] hover:bg-[#00cc33] text-[#0a0a0a] rounded-lg transition-colors disabled:opacity-40"
               >
                 {saving ? 'Saving…' : 'Save'}
               </button>

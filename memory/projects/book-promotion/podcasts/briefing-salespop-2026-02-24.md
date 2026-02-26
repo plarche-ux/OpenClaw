@@ -65,6 +65,33 @@ John's listeners are in sales. Frame everything through the sales lens:
 
 ---
 
+---
+
+## MOCHA — Your Framework (Use If It Comes Up)
+
+**MOCHA** is a customer experience flywheel Paul developed during his radio career. It's a natural bridge between sales methodology and behavioral psychology — and a credibility signal that you've been doing this long before the book.
+
+**The loop:** Make → Our → Customers → Happy → Always → (back to Make)
+
+| Letter | Stage | Core idea |
+|--------|-------|-----------|
+| **M** | Make | Internal foundation — right people, right strategy, will to win |
+| **O** | Our | Define who your customers actually are (clients, advocates, employees) |
+| **C** | Customers | See the world through their eyes — demo, psycho, generational |
+| **H** | Happy | *Emotion is the key.* This is the whole game. |
+| **A** | Always | Best practices + training + NPS — until you find a better way |
+
+**The Divided Brain connection:**
+> "MOCHA's H is where I landed before I understood the neuroscience. Emotion is the key — we knew that from 30 years of radio. The Divided Brain just gave me the explanation for *why*. The Old Brain decides. The New Brain writes the justification memo after."
+
+**If John brings up SPIN Selling:**
+> "SPIN and MOCHA are actually complementary. SPIN is brilliant because Situation and Problem questions let the buyer's Old Brain identify its own threat — you're not pushing, you're revealing. MOCHA says once you've done that, the H has to be real. You can surface the pain perfectly and still lose the deal if the emotional experience of working with you doesn't feel right."
+
+**If he asks about your background building it:**
+> "I built five radio stations from scratch. In radio, you live or die on listener loyalty — you can't force someone to stay tuned. MOCHA came out of figuring out why some stations created fans who'd call in at 2am, and others just had audiences. The difference was always emotional. The Divided Brain is the science underneath what we were doing intuitively."
+
+---
+
 ## Delivery Reminders
 - ☐ **Pause > uh.** When you feel filler coming: stop, breathe, speak.
 - ☐ **Scene first.** Open every answer with a real story before the concept.
