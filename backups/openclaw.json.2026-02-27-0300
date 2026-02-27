@@ -1,0 +1,329 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.2.24",
+    "lastTouchedAt": "2026-02-25T21:02:28.547Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-02-24T15:46:07.964Z",
+    "lastRunVersion": "2026.2.22-2",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "update": {
+    "channel": "stable",
+    "auto": {
+      "enabled": true
+    }
+  },
+  "auth": {
+    "profiles": {
+      "google": {
+        "provider": "google",
+        "mode": "api_key"
+      },
+      "moonshot": {
+        "provider": "moonshot",
+        "mode": "api_key"
+      },
+      "minimax": {
+        "provider": "minimax",
+        "mode": "api_key"
+      },
+      "perplexity": {
+        "provider": "perplexity",
+        "mode": "api_key"
+      },
+      "brave": {
+        "provider": "brave-search",
+        "mode": "api_key"
+      },
+      "tavily": {
+        "provider": "tavily-search",
+        "mode": "api_key"
+      },
+      "anthropic": {
+        "provider": "anthropic",
+        "mode": "api_key"
+      },
+      "openai": {
+        "provider": "openai",
+        "mode": "api_key"
+      },
+      "ollama": {
+        "provider": "ollama",
+        "mode": "token"
+      },
+      "google:default": {
+        "provider": "google",
+        "mode": "api_key"
+      }
+    }
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "moonshot": {
+        "baseUrl": "https://api.moonshot.ai/v1",
+        "apiKey": "***REDACTED***",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "kimi-k2.5",
+            "name": "Kimi K2.5"
+          }
+        ]
+      },
+      "minimax": {
+        "baseUrl": "https://api.minimax.io/anthropic",
+        "apiKey": "***REDACTED***",
+        "api": "anthropic-messages",
+        "models": [
+          {
+            "id": "minimax-2.5",
+            "name": "MiniMax 2.5"
+          },
+          {
+            "id": "MiniMax-M2.5",
+            "name": "MiniMax M2.5",
+            "reasoning": true
+          }
+        ]
+      },
+      "perplexity": {
+        "baseUrl": "https://api.perplexity.ai",
+        "apiKey": "***REDACTED***",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "sonar-pro",
+            "name": "Sonar Pro"
+          }
+        ]
+      },
+      "ollama": {
+        "baseUrl": "http://localhost:11434",
+        "api": "ollama",
+        "models": [
+          {
+            "id": "llama3.2:3b",
+            "name": "Llama 3.2 3B"
+          },
+          {
+            "id": "qwen2.5:14b",
+            "name": "Qwen 2.5 14B"
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "google/gemini-3-flash-preview",
+        "fallbacks": [
+          "minimax/minimax-2.5"
+        ]
+      },
+      "models": {
+        "google/gemini-3-flash-preview": {
+          "alias": "gemini-flash"
+        },
+        "moonshot/kimi-k2.5": {
+          "alias": "kimi"
+        },
+        "minimax/minimax-2.5": {
+          "alias": "minimax"
+        },
+        "perplexity/sonar-pro": {
+          "alias": "sonar"
+        },
+        "openai/o1-preview": {
+          "alias": "o1"
+        },
+        "openai/gpt-5.2": {
+          "alias": "gpt5"
+        },
+        "ollama/llama3.2:3b": {
+          "alias": "triage"
+        },
+        "ollama/qwen2.5:14b": {
+          "alias": "local-medium"
+        },
+        "anthropic/claude-sonnet-4-6": {
+          "alias": "sonnet",
+          "params": {
+            "cacheRetention": "short"
+          }
+        },
+        "minimax/MiniMax-M2.5": {
+          "alias": "Minimax"
+        },
+        "google/gemini-3-pro-preview": {
+          "alias": "gemini"
+        },
+        "google/gemini-3.1-pro-preview": {
+          "alias": "gemini-3.1"
+        },
+        "ollama/qwen3:30b": {
+          "alias": "local-heavy"
+        }
+      },
+      "workspace": "/Users/paul/.openclaw/workspace",
+      "memorySearch": {
+        "enabled": true,
+        "extraPaths": [
+          "memory/projects",
+          "memory/people",
+          "memory/reference",
+          "memory/meetings"
+        ],
+        "experimental": {
+          "sessionMemory": true
+        },
+        "provider": "gemini"
+      },
+      "contextPruning": {
+        "mode": "cache-ttl",
+        "ttl": "1h"
+      },
+      "compaction": {
+        "mode": "safeguard",
+        "reserveTokensFloor": 80000,
+        "memoryFlush": {
+          "enabled": true,
+          "softThresholdTokens": 20000,
+          "prompt": "Write any lasting notes to memory/daily/YYYY-MM-DD.md and update MEMORY.md if needed; reply with NO_REPLY if nothing to store.",
+          "systemPrompt": "Session nearing compaction. Store durable memories now."
+        }
+      },
+      "heartbeat": {
+        "every": "30m",
+        "model": "ollama/llama3.2:3b",
+        "target": "none"
+      }
+    },
+    "list": [
+      {
+        "id": "main",
+        "default": true,
+        "name": "main",
+        "workspace": "/Users/paul/.openclaw/workspace",
+        "agentDir": "/Users/paul/.openclaw/agents/main/agent",
+        "model": "google/gemini-3-flash-preview",
+        "subagents": {
+          "allowAgents": [
+            "trinity",
+            "niobe",
+            "link"
+          ]
+        }
+      },
+      {
+        "id": "trinity",
+        "name": "Trinity",
+        "workspace": "/Users/paul/.openclaw/workspace-trinity",
+        "agentDir": "/Users/paul/.openclaw/agents/trinity/agent",
+        "model": "moonshot/kimi-k2.5"
+      },
+      {
+        "id": "niobe",
+        "name": "Niobe",
+        "workspace": "/Users/paul/.openclaw/workspace-niobe",
+        "agentDir": "/Users/paul/.openclaw/agents/niobe/agent",
+        "model": "google/gemini-3-flash-preview"
+      },
+      {
+        "id": "link",
+        "name": "Link",
+        "workspace": "/Users/paul/.openclaw/workspace-link",
+        "agentDir": "/Users/paul/.openclaw/agents/link/agent",
+        "model": "moonshot/kimi-k2.5"
+      }
+    ]
+  },
+  "tools": {
+    "web": {
+      "search": {
+        "enabled": true,
+        "provider": "brave",
+        "apiKey": "***REDACTED***"
+      }
+    },
+    "agentToAgent": {
+      "enabled": true,
+      "allow": [
+        "main",
+        "trinity",
+        "niobe",
+        "link"
+      ]
+    }
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "self-improvement": {
+          "enabled": true
+        }
+      },
+      "installs": {
+        "self-improvement": {
+          "source": "path",
+          "sourcePath": "/Users/paul/.openclaw/workspace/skills/self-improving-agent/hooks/openclaw",
+          "installPath": "/Users/paul/.openclaw/hooks/self-improvement",
+          "installedAt": "2026-02-23T21:55:13.690Z",
+          "hooks": [
+            "self-improvement"
+          ]
+        }
+      }
+    }
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "botToken": "7877264349:AAFjBJRyZGu1h3jxZBL0kTgZOuHJaGO7-6c",
+      "groupPolicy": "allowlist",
+      "streaming": "partial"
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "7d8a99443c126783fbdf279a003a13d03f81224a300d3e82"
+    }
+  },
+  "memory": {
+    "backend": "qmd",
+    "qmd": {
+      "searchMode": "query",
+      "sessions": {
+        "enabled": true
+      },
+      "update": {
+        "interval": "3m"
+      },
+      "limits": {
+        "timeoutMs": 20000
+      }
+    }
+  },
+  "plugins": {
+    "entries": {
+      "telegram": {
+        "enabled": true
+      }
+    }
+  }
+}
