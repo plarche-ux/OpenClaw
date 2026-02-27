@@ -191,7 +191,7 @@
       "showName": "WholeCEO with Lisa G",
       "host": "Lisa Goldenthal",
       "hostTitle": "WholeCEO podcast host / Fitness & business coach",
-      "hostLinkedIn": "",
+      "hostLinkedIn": "https://www.linkedin.com/in/lisa-g-fit",
       "hostNotes": "Warm, enthusiastic interviewer. Audience: executives and business leaders. Episode 462.",
       "showStats": "Top podcast | 248+ eps | Active YouTube presence",
       "showUrl": "https://lisagfit.libsyn.com/rss",
@@ -224,6 +224,36 @@
           "No scene-first structure — open every answer with a story"
         ],
         "notes": "Episode: 'AI, Algorithms, and Emotion, Oh My' (Ep. 462, 20:43)"
+      }
+    },
+    {
+      "id": "canreads-finalist-2026-02-26",
+      "showName": "CANREADS Awards & Literary Mixer",
+      "host": "Victoria",
+      "hostTitle": "Editorial Assistant, CANREADS",
+      "hostLinkedIn": "",
+      "hostNotes": "Inaugural literary tradition elevating exceptional Canadian books.",
+      "showStats": "400+ submissions for 2026 cycle",
+      "showUrl": "https://canreads.ca",
+      "youtubeUrl": "",
+      "status": "new_opportunity",
+      "date": "2026-05-28",
+      "time": "18:00",
+      "timezone": "ET",
+      "durationMin": 210,
+      "platform": "In-person (Toronto)",
+      "platformNotes": "Storys Building, 11 Duncan Street. RSVP required. Code: GALA15OFF.",
+      "sessionLink": "https://canreads.ca/2026-canreads-finalists",
+      "publicist": "",
+      "briefingPdf": "",
+      "anticipatedQuestions": [],
+      "cheatSheet": { "bookClose": "", "aiAnswer": "", "credentialDrop": "", "deliveryRules": [], "techChecklist": [] },
+      "postShow": {
+        "recordingUrl": "",
+        "critiqueDate": "",
+        "scores": { "frameworkClarity": null, "storytelling": null, "delivery": null, "credibilitySignals": null, "bookClose": null },
+        "topImprovements": [],
+        "notes": "Finalist for Business / Finance / Marketing category."
       }
     },
     {
