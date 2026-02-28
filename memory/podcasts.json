@@ -105,7 +105,13 @@
       "postShow": {
         "recordingUrl": "",
         "critiqueDate": "",
-        "scores": { "frameworkClarity": null, "storytelling": null, "delivery": null, "credibilitySignals": null, "bookClose": null },
+        "scores": {
+          "frameworkClarity": null,
+          "storytelling": null,
+          "delivery": null,
+          "credibilitySignals": null,
+          "bookClose": null
+        },
         "topImprovements": [],
         "notes": ""
       }
@@ -145,7 +151,13 @@
       "postShow": {
         "recordingUrl": "",
         "critiqueDate": "",
-        "scores": { "frameworkClarity": null, "storytelling": null, "delivery": null, "credibilitySignals": null, "bookClose": null },
+        "scores": {
+          "frameworkClarity": null,
+          "storytelling": null,
+          "delivery": null,
+          "credibilitySignals": null,
+          "bookClose": null
+        },
         "topImprovements": [],
         "notes": ""
       }
@@ -160,13 +172,13 @@
       "showStats": "Top 2% globally | 248 eps | 75 reviews",
       "showUrl": "",
       "youtubeUrl": "",
-      "status": "new_opportunity",
-      "date": "",
-      "time": "",
+      "status": "pending_confirmation",
+      "date": "2026-03-17",
+      "time": "20:30",
       "timezone": "ET",
       "durationMin": 60,
       "platform": "TBD",
-      "platformNotes": "Available: Mar 11 (5-7pm), Mar 12 (4:30-7:30pm), Mar 13 (6-7pm), Mar 16 (5:30-6:30pm), Mar 17 (8:30pm). Reply to jimmy@dalynmillerpr.com to schedule.",
+      "platformNotes": "Paul replied on Feb 27 offering Mar 17 at 8:30pm. Awaiting confirmation.",
       "sessionLink": "",
       "publicist": "Jimmy Dwyer — jimmy@dalynmillerpr.com — 703-772-1495",
       "briefingPdf": "",
@@ -181,7 +193,13 @@
       "postShow": {
         "recordingUrl": "",
         "critiqueDate": "",
-        "scores": { "frameworkClarity": null, "storytelling": null, "delivery": null, "credibilitySignals": null, "bookClose": null },
+        "scores": {
+          "frameworkClarity": null,
+          "storytelling": null,
+          "delivery": null,
+          "credibilitySignals": null,
+          "bookClose": null
+        },
         "topImprovements": [],
         "notes": ""
       }
@@ -207,7 +225,13 @@
       "publicist": "Jimmy Dwyer — jimmy@dalynmillerpr.com — 703-772-1495",
       "briefingPdf": "",
       "anticipatedQuestions": [],
-      "cheatSheet": { "bookClose": "", "aiAnswer": "", "credentialDrop": "", "deliveryRules": [], "techChecklist": [] },
+      "cheatSheet": {
+        "bookClose": "",
+        "aiAnswer": "",
+        "credentialDrop": "",
+        "deliveryRules": [],
+        "techChecklist": []
+      },
       "postShow": {
         "recordingUrl": "https://youtu.be/1G2l-qw385s?si=PLbVWkA7iQKmOQ6m",
         "critiqueDate": "2026-02-23",
@@ -247,11 +271,23 @@
       "publicist": "",
       "briefingPdf": "",
       "anticipatedQuestions": [],
-      "cheatSheet": { "bookClose": "", "aiAnswer": "", "credentialDrop": "", "deliveryRules": [], "techChecklist": [] },
+      "cheatSheet": {
+        "bookClose": "",
+        "aiAnswer": "",
+        "credentialDrop": "",
+        "deliveryRules": [],
+        "techChecklist": []
+      },
       "postShow": {
         "recordingUrl": "",
         "critiqueDate": "",
-        "scores": { "frameworkClarity": null, "storytelling": null, "delivery": null, "credibilitySignals": null, "bookClose": null },
+        "scores": {
+          "frameworkClarity": null,
+          "storytelling": null,
+          "delivery": null,
+          "credibilitySignals": null,
+          "bookClose": null
+        },
         "topImprovements": [],
         "notes": "Finalist for Business / Finance / Marketing category."
       }
@@ -283,11 +319,23 @@
         "In plain language, what do you mean by the Old Brain and the New Brain?",
         "Why do emotional triggers outlast rational arguments in decision-making?"
       ],
-      "cheatSheet": { "bookClose": "", "aiAnswer": "", "credentialDrop": "", "deliveryRules": [], "techChecklist": [] },
+      "cheatSheet": {
+        "bookClose": "",
+        "aiAnswer": "",
+        "credentialDrop": "",
+        "deliveryRules": [],
+        "techChecklist": []
+      },
       "postShow": {
         "recordingUrl": "",
         "critiqueDate": "",
-        "scores": { "frameworkClarity": null, "storytelling": null, "delivery": null, "credibilitySignals": null, "bookClose": null },
+        "scores": {
+          "frameworkClarity": null,
+          "storytelling": null,
+          "delivery": null,
+          "credibilitySignals": null,
+          "bookClose": null
+        },
         "topImprovements": [],
         "notes": "Critique pending — no recording link yet"
       }

@@ -88,6 +88,10 @@ When a system event arrives with text starting `TASK_REVIEW_REQUEST`:
 - **Jamie Massie** — Barrie Cares Director / External Outreach
 
 ## Decisions
+- **LinkedIn Draft Auto-Save (2026-02-27):** Any time Trinity drafts a new LinkedIn post, it MUST automatically be saved to `memory/linkedin-posts.json` with a "draft" status so it populates the Mission Control Drafts page. Do not just output it in chat.
+- **Model Preference (2026-02-27):** Switched to Gemini 3.1 Pro (alias: gemini-3.1) for deep reasoning and project audits per Paul's request.
+- **Mission Control UI (2026-02-27):** Changed color scheme back to light mode in `globals.css`. Built Team page and Podcasts page (Link agent).
+
 - **Writing Rule (2026-02-22):** NEVER use em dashes (—) in generated copy, descriptions, or social posts. Paul considers them a dead giveaway of AI generation.
 - **Memory Optimization (2026-02-22):** Compaction now fires at 120k tokens (was 180k). Memory flush at 100k tokens (was 176k). QMD searchMode = "query" (reranking enabled). QMD syncs every 3 min. Research doc: `memory/reference/memory-optimization.md`.
 - **Post-Compaction Protocol (2026-02-22):** `WORKFLOW_AUTO.md` created — forces memory search + process check before any action after reset. Heartbeat now runs `qmd update && qmd embed` every cycle.
@@ -100,7 +104,7 @@ When a system event arrives with text starting `TASK_REVIEW_REQUEST`:
 
 ## Pending Actions
 - **Sales POP! Podcast (Feb 24)**: ✅ COMPLETED. Host: John Golden (ex-CEO Huthwaite/SPIN Selling). Focus: "what does the salesperson do differently when they understand the Old Brain?" Est. release: ~March 17. Post-show critique pending recording link.
-- **Out of the Box with Christine Blosdale**: New opp received Feb 23. Dates: Mar 11–17. Paul has not replied yet.
+- **Out of the Box with Christine Blosdale**: New opp received Feb 23. Paul replied offering March 17 at 8:30pm ET. Awaiting confirmation.
 - **Escaping the Drift critique**: recorded Feb 21. No post-show critique done yet — run when link available.
 - **LinkedIn post for Wed Feb 25**: Slot is open — next post (lp-024, postNumber 29) to draft.
 - **Guests (Feb 25 - Mar 4)**: Barb and Jeff arriving Feb 25 at 11:15 AM (organized by Lawrence Larche).

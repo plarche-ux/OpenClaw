@@ -31,15 +31,15 @@ function FileTree({
           {node.isDir ? (
             <>
               <button
-                className="flex items-center gap-1.5 w-full text-left px-2 py-1 rounded hover:bg-[#111827] text-sm text-[#e2e8f0] transition-colors"
+                className="flex items-center gap-1.5 w-full text-left px-2 py-1 rounded hover:bg-slate-50 text-sm text-slate-800 transition-colors"
                 onClick={() => setOpen(o => ({ ...o, [node.path]: !o[node.path] }))}
               >
                 {open[node.path] ? <ChevronDown size={13} /> : <ChevronRight size={13} />}
-                <Folder size={13} className="text-[#00ff41]" />
+                <Folder size={13} className="text-blue-600" />
                 <span className="font-medium">{node.name}</span>
               </button>
               {open[node.path] && node.children && (
-                <div className="ml-4 border-l border-[#1f2937] pl-1 my-1">
+                <div className="ml-4 border-l border-slate-200 pl-1 my-1">
                   <FileTree nodes={node.children} onSelect={onSelect} selectedPath={selectedPath} />
                 </div>
               )}
@@ -48,8 +48,8 @@ function FileTree({
             <button
               className={`flex items-center gap-1.5 w-full text-left px-2 py-1 rounded text-sm transition-all ${
                 selectedPath === node.path
-                  ? 'bg-[#00ff41] text-[#0a0a0a] font-medium shadow-[0_0_8px_rgba(0,255,65,0.2)]'
-                  : 'text-[#6b7280] hover:bg-[#111827] hover:text-[#e2e8f0]'
+                  ? 'bg-blue-600 text-white font-medium shadow-sm'
+                  : 'text-slate-500 hover:bg-slate-50 hover:text-slate-800'
               }`}
               onClick={() => onSelect(node.path)}
             >
@@ -140,26 +140,26 @@ export default function DocsPage() {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold text-white mb-6">Docs</h1>
+      <h1 className="text-2xl font-bold text-slate-900 mb-6">Docs</h1>
       <div className="flex gap-6 min-h-[70vh]">
         {/* File tree */}
-        <div className="w-64 shrink-0 bg-[#0a0a0a] border border-[#1f2937] rounded-xl p-3 overflow-y-auto max-h-[80vh]">
+        <div className="w-64 shrink-0 bg-white border border-slate-200 rounded-xl p-3 overflow-y-auto max-h-[80vh]">
           {tree.length === 0 ? (
-            <p className="text-[#6b7280] text-sm px-2 py-2 font-mono animate-pulse">Scanning matrix…</p>
+            <p className="text-slate-500 text-sm px-2 py-2 font-mono animate-pulse">Scanning matrix…</p>
           ) : (
             <FileTree nodes={tree} onSelect={openFile} selectedPath={selectedPath} />
           )}
         </div>
 
         {/* Content */}
-        <div className="flex-1 bg-[#111827] border border-[#1f2937] rounded-xl overflow-hidden flex flex-col max-h-[80vh]">
+        <div className="flex-1 bg-slate-50 border border-slate-200 rounded-xl overflow-hidden flex flex-col max-h-[80vh]">
           {/* Toolbar */}
           {selectedPath && !loading && (
-            <div className="flex items-center justify-between px-6 py-3 border-b border-[#1f2937] bg-[#0f1117]">
-              <span className="text-xs text-[#6b7280] font-mono">{selectedPath}</span>
+            <div className="flex items-center justify-between px-6 py-3 border-b border-slate-200 bg-slate-100">
+              <span className="text-xs text-slate-500 font-mono">{selectedPath}</span>
               <div className="flex items-center gap-2">
                 {saveStatus === 'saved' && (
-                  <span className="flex items-center gap-1 text-xs text-[#00ff41] font-medium">
+                  <span className="flex items-center gap-1 text-xs text-blue-600 font-medium">
                     <CheckCircle size={13} /> Saved
                   </span>
                 )}
@@ -169,7 +169,7 @@ export default function DocsPage() {
                 {!editing && isMarkdown && (
                   <button
                     onClick={startEdit}
-                    className="flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-lg bg-[#00ff41] hover:bg-[#00cc33] text-[#0a0a0a] font-bold shadow-[0_0_10px_rgba(0,255,65,0.2)] transition-all"
+                    className="flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-bold shadow-md transition-all"
                   >
                     <Pencil size={12} /> Edit
                   </button>
@@ -178,14 +178,14 @@ export default function DocsPage() {
                   <>
                     <button
                       onClick={cancelEdit}
-                      className="flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-lg bg-[#1f2937] hover:bg-[#374151] text-[#e2e8f0] font-medium transition-colors"
+                      className="flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 font-medium transition-colors"
                     >
                       <X size={12} /> Cancel
                     </button>
                     <button
                       onClick={saveFile}
                       disabled={saving}
-                      className="flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-lg bg-[#00cc33] hover:bg-[#00ff41] text-[#0a0a0a] font-bold transition-all disabled:opacity-50"
+                      className="flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-600 text-white font-bold transition-all disabled:opacity-50"
                     >
                       <Save size={12} /> {saving ? 'Saving…' : 'Save'}
                     </button>
@@ -198,15 +198,15 @@ export default function DocsPage() {
           {/* Body */}
           <div className="flex-1 overflow-auto p-6">
             {!selectedPath && (
-              <div className="text-[#6b7280] text-sm flex flex-col items-center justify-center h-40 gap-2">
-                <FileText size={32} className="text-[#1f2937]" />
+              <div className="text-slate-500 text-sm flex flex-col items-center justify-center h-40 gap-2">
+                <FileText size={32} className="text-slate-600" />
                 Select a file from the tree to read it
               </div>
             )}
-            {loading && <p className="text-[#6b7280] text-sm font-mono animate-pulse">Decrypting content…</p>}
+            {loading && <p className="text-slate-500 text-sm font-mono animate-pulse">Decrypting content…</p>}
             {!loading && editing && (
               <textarea
-                className="w-full h-full min-h-[60vh] font-mono text-sm text-[#e2e8f0] bg-[#0a0a0a] border border-[#1f2937] rounded-lg p-4 resize-none focus:outline-none focus:ring-2 focus:ring-[#00ff41]/30 focus:border-[#00ff41]"
+                className="w-full h-full min-h-[60vh] font-mono text-sm text-slate-800 bg-white border border-slate-200 rounded-lg p-4 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-500"
                 value={editContent}
                 onChange={e => setEditContent(e.target.value)}
                 spellCheck={false}

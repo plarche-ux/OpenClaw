@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  /* Matrix Theme Colors */
-  --color-matrix: #00ff41;
-  --color-matrix-dim: #00cc33;
-  --color-matrix-dark: #003d0f;
-  --color-matrix-glow: rgba(0, 255, 65, 0.15);
-  --color-bg-primary: #0a0a0a;
-  --color-bg-surface: #111827;
-  --color-bg-elevated: #0f1117;
-  --color-text-primary: #ffffff;
-  --color-text-body: #e2e8f0;
-  --color-text-muted: #6b7280;
-  --color-border-subtle: #1f2937;
+  /* Light Theme Colors */
+  --color-matrix: #2563eb;
+  --color-matrix-dim: #3b82f6;
+  --color-matrix-dark: #1d4ed8;
+  --color-matrix-glow: rgba(37, 99, 235, 0.15);
+  --color-bg-primary: #f8fafc;
+  --color-bg-surface: #ffffff;
+  --color-bg-elevated: #f1f5f9;
+  --color-text-primary: #0f172a;
+  --color-text-body: #334155;
+  --color-text-muted: #64748b;
+  --color-border-subtle: #e2e8f0;
 }
 
 body {
@@ -21,26 +21,25 @@ body {
   color: var(--color-text-body);
 }
 
-/* Matrix scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-bg-surface);
+  background: var(--color-bg-elevated);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-matrix-dark);
+  background: #cbd5e1;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-matrix-dim);
+  background: #94a3b8;
 }
 
-/* Markdown prose styles - Matrix themed */
+/* Markdown prose styles - Light themed */
 .prose h1 { 
   font-size: 1.5rem; 
   font-weight: 700; 
@@ -82,17 +81,17 @@ body {
   color: var(--color-text-body);
 }
 .prose code { 
-  background: var(--color-bg-surface); 
+  background: var(--color-bg-elevated); 
   padding: 0.1em 0.3em; 
   border-radius: 3px; 
   font-size: 0.85em; 
   font-family: 'Menlo', 'Monaco', monospace;
-  color: var(--color-matrix);
-  border: 1px solid var(--color-matrix-dark);
+  color: #b91c1c;
+  border: 1px solid var(--color-border-subtle);
 }
 .prose pre { 
-  background: var(--color-bg-surface); 
-  color: var(--color-text-body); 
+  background: #1e293b; 
+  color: #f8fafc; 
   padding: 1rem; 
   border-radius: 8px; 
   overflow-x: auto; 
@@ -107,7 +106,7 @@ body {
   border: none;
 }
 .prose blockquote { 
-  border-left: 3px solid var(--color-matrix); 
+  border-left: 3px solid var(--color-matrix-dim); 
   padding-left: 1rem; 
   color: var(--color-text-muted); 
   margin: 0.5rem 0; 
@@ -131,7 +130,7 @@ body {
   margin: 0.75rem 0; 
 }
 .prose th { 
-  background: var(--color-bg-surface); 
+  background: var(--color-bg-elevated); 
   font-weight: 600; 
   padding: 0.5rem 0.75rem; 
   border: 1px solid var(--color-border-subtle); 
@@ -144,8 +143,7 @@ body {
   color: var(--color-text-body);
 }
 
-/* Selection color */
 ::selection {
-  background: var(--color-matrix-dark);
-  color: var(--color-matrix);
+  background: var(--color-matrix-glow);
+  color: var(--color-matrix-dark);
 }
