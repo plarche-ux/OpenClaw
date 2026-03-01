@@ -2,7 +2,7 @@
 
 ## System
 - Running on: Mac Mini M4, 32 GB
-- OpenClaw: native install with launchd daemon (v2026.2.23) — auto-update cron runs nightly at 3 AM ET
+- OpenClaw: native install with launchd daemon (v2026.2.26) — auto-update cron runs nightly at 3 AM ET
 - Execution sandbox: OrbStack (Docker) for agent-generated code
 - Models: Gemini 3 Flash (main/general, alias: gemini-flash), Gemini 3.1 Pro (on-demand, alias: gemini-3.1), Kimi K2.5 (coding/complex, alias: kimi), MiniMax M2.5 (coding/fallback, alias: minimax), Claude Sonnet 4.6 (on-demand, alias: sonnet), GPT-5.2 (on-demand, alias: gpt5), Ollama qwen3:30b (heartbeats/local, alias: local-heavy), Ollama qwen2.5:14b (local fallback, alias: local-medium), Ollama llama3.2:3b (triage)
 - **Model aliases:** gemini-flash=gemini-3-flash-preview, gemini-3.1=gemini-3.1-pro-preview, kimi=kimi-k2.5, minimax=minimax-2.5, Minimax=MiniMax-M2.5, sonnet=claude-sonnet-4-6, gpt5=gpt-5.2, triage=llama3.2:3b, local-medium=qwen2.5:14b, local-heavy=qwen3:30b
@@ -18,7 +18,7 @@
 - **⚠️ Gateway reload:** Do NOT use `kill -HUP`, `launchctl bootout`, or `openclaw gateway restart`. Safe sequence: `openclaw gateway stop && sleep 2 && openclaw gateway start`. `com.openclaw.backup` LaunchAgent removed.
 - **⚠️ Config Change Safety (MANDATORY):** ALWAYS run `~/.openclaw/workspace/scripts/backup-openclaw-config.sh` BEFORE editing `openclaw.json` or restarting the gateway. Emergency restore instructions: `~/Desktop/RESTORE.txt`. Backups stored in `workspace/backups/` committed to workspace git.
 - **System Hardening (2026-02-24):** `openclaw doctor --fix` and `openclaw security audit --fix` run. Canonicalized session keys, set file permissions to 600, and removed invalid `sources` key from `memorySearch.experimental`.
-- **Auto-Update (2026-02-24):** OpenClaw updated to `v2026.2.23`. Auto-update cron (ID `9290284c`) created to run nightly at 3 AM ET.
+- **Auto-Update (2026-02-28):** OpenClaw updated to `v2026.2.26`. Features include `openclaw secrets` workflow and Android node support (device status/notifications).
 - **Heartbeat Cycles (2026-02-24):** QMD sync + embed confirmed working every cycle.
 - **Infrastructure Status (2026-02-24):** PM2 managing `brand-value-canvas` (:3000) and `mission-control` (:3001).
 - Remote access: Jump Desktop (primary)
@@ -30,6 +30,11 @@
 - Core concept: The "Old Brain" (emotional, instinctive) drives decisions; the "New Brain" (logical, analytical) rationalizes them after the fact
 - Manuscript: memory/reference/the-divided-brain.md
 - Branding rules: memory/reference/divided-brain-branding.md
+- **Book Positioning (2026-02-28):** Audited behavioral sales landscape across 4 models (Research Bake-off). *The Divided Brain* is positioned as the "missing bridge" connecting deep academia (Kahneman) with real-world application, bypassing the "hacking" feel of modern rivals like Jeremy Miner (*The New Model of Selling*), David Hoffeld (*The Science of Selling*), and Renvoise & Morin (*The Persuasion Code*).
+- **Amazon Strategy (2026-02-28):** Priority actions identified:
+    - Categories: Expand to "Medical Books > Psychology" and "Business & Money > Skills > Decision Making."
+    - Keywords: Add `habit loop`, `neuroscience business`, `cognitive bias sales`, `why people buy`.
+    - Pricing: Target $16.99 (positioning between James Clear and Robert Cialdini).
 
 ## Infrastructure
 - **PM2:** Installed globally. Manages Brand Value Canvas (:3000) and Mission Control (:3001) dev servers. Configured to auto-start on Mac reboot. Commands: `pm2 list`, `pm2 logs <name>`, `pm2 restart <name>`.
@@ -62,7 +67,6 @@ When a system event arrives with text starting `TASK_REVIEW_REQUEST`:
 - **NEVER output API keys in chat.** If a key appears in any tool output or is read from a file, NEVER echo it back in any response. Use placeholders like `AIzaSy...` or say "Got it. Updating now." If you must confirm an update, say "Key is live" without any characters from the key itself.
 - If receiving keys via file attachment, read and update immediately, delete the file, and respond with no key visible.
 
-
 ## Amazon Ads
 - **Last audit (Feb 22, 2026):** $116.66 spend / $3.99 sales / 2923% ACoS over 30 days
 - **Surgical cuts applied (Feb 21):** Paused "branding" keyword; added "decision making" + "behavioral psychology"
@@ -91,7 +95,9 @@ When a system event arrives with text starting `TASK_REVIEW_REQUEST`:
 - **LinkedIn Draft Auto-Save (2026-02-27):** Any time Trinity drafts a new LinkedIn post, it MUST automatically be saved to `memory/linkedin-posts.json` with a "draft" status so it populates the Mission Control Drafts page. Do not just output it in chat.
 - **Model Preference (2026-02-27):** Switched to Gemini 3.1 Pro (alias: gemini-3.1) for deep reasoning and project audits per Paul's request.
 - **Mission Control UI (2026-02-27):** Changed color scheme back to light mode in `globals.css`. Built Team page and Podcasts page (Link agent).
+- **Android Integration (2026-02-28):** Recommended pairing Paul's Android phone as a Node to monitor book sales and Barrie Cares alerts while mobile.
 
+## Lessons Learned
 - **Writing Rule (2026-02-22):** NEVER use em dashes (—) in generated copy, descriptions, or social posts. Paul considers them a dead giveaway of AI generation.
 - **Memory Optimization (2026-02-22):** Compaction now fires at 120k tokens (was 180k). Memory flush at 100k tokens (was 176k). QMD searchMode = "query" (reranking enabled). QMD syncs every 3 min. Research doc: `memory/reference/memory-optimization.md`.
 - **Post-Compaction Protocol (2026-02-22):** `WORKFLOW_AUTO.md` created — forces memory search + process check before any action after reset. Heartbeat now runs `qmd update && qmd embed` every cycle.
@@ -101,12 +107,29 @@ When a system event arrives with text starting `TASK_REVIEW_REQUEST`:
 - **KDP Optimization (2026-02-21):** Applied new categories (Consumer Behavior, Applied Psychology, Decision-Making), 7 backend keywords, new Cialdini-positioning description. Primary marketplace: Amazon.com. Paperback confirmed published.
 - **Cron Configuration (2026-02-21):** Fixed delivery issues by adding `"channel": "last"` and `bestEffort` to crons.
 - **API Keys (2026-02-21):** Replaced invalid MiniMax key. Perplexity key still returning 401; fresh key required.
+- **Memory Amnesia Fix (2026-02-22):** Root cause was flush triggering at 176k tokens (too late). Fixed via config + WORKFLOW_AUTO.md. If I redo completed work, check daily notes for "DO NOT redo" flags before acting.
+- **Dev Server Restart (2026-02-23):** Dev servers now managed by PM2 and survive gateway restarts automatically. PM2 also configured to auto-start on Mac reboot. No manual restart needed.
+- **Calendar Verification (2026-02-19):** Always verify live calendar via `gog` CLI rather than relying on cached briefs.
+- **Technical Fix (2026-02-19):** PATH stays resolved by explicitly pointing to `/opt/homebrew/Cellar/node@22/22.22.0/bin/node` for `gog` and node commands.
+- **LinkedIn Post Pipeline (2026-02-21):** Tracked in `memory/projects/linkedin-pipeline.csv` — always check before generating a new post.
+- **Gateway Crash Root Cause (2026-02-24):** `openclaw gateway restart` conflicts with LaunchD KeepAlive → lock-contention loop. Combined with invalid `sources` key in `memorySearch.experimental` causing config validation errors. Fix: always use `stop && sleep 2 && start`. Never use `openclaw gateway restart`.
+- **Config Backup System (2026-02-24):** Built timestamped backup + git-committed restore system. Run backup BEFORE any config change. Scripts in `workspace/scripts/`. Skill: `workspace/skills/config-safety/SKILL.md`. Emergency: `~/Desktop/RESTORE.txt`.
+- **sessionMemory Config (2026-02-24):** Added `agents.defaults.memorySearch.experimental.sessionMemory = true` to `openclaw.json`. Do NOT re-add. `compaction.memoryFlush.enabled` was already `true` — do NOT re-add.
+- **Branding Rules (2026-02-21):** Visual DNA in `memory/reference/divided-brain-branding.md`. Face silhouette always points LEFT; Large Gear = Old Brain (dominant); Small Gear = New Brain. Assets in Google Drive: `1eslLIjy1K25e4igHmILTNjRWGkg5G-zd`.
+- **Amazon Ads Configuration (2026-02-21):** Whitelisted redirect URI `https://paullarche.com`. 30-day audit revealed 2923% ACoS; surgical cuts applied. SOP: `skills/amazon-handshake-sop.md`.
+- **Book Sales Intelligence (2026-02-21):** Recurring subagent (every 3 days) researches Amazon algorithm trends for The Divided Brain.
+- **Apple Watch Shortcut (2026-02-21):** URL scheme to trigger OpenClaw: `https://t.me/plarche1Bot?text=[Input]`.
+- **API Key Rotation (2026-02-23):** When rotating a Google key, update BOTH `auth.json` AND `auth-profiles.json`. Only updating auth.json leaves the old (possibly revoked) key in auth-profiles.json, causing cooldown errors and slow/failed responses. Also clear `usageStats` in auth-profiles.json to remove any cooldown timers from the old key.
+- **Key Security (2026-02-23):** NEVER output API keys in chat responses — not even to confirm they were updated. Google scanners detect keys in chat and auto-revoke them within minutes. Always say "Key is live" with no key characters visible.
+- **Podcast Delivery (2026-02-23):** WholeCEO/Lisa G critique — filler words (~65 per 20 min), stumbled on own book title at close (said it 3x), "Hawkins razor" error (it's Occam's razor), "private parts" framing awkward (use "status/ego"). All standing rules now in `skills/podcast-prep-master.md` — do not re-document per episode.
+- **Podcast Prep Skill (2026-02-23):** `skills/podcast-prep-master.md` rebuilt as full 6-step workflow. Model routing baked in: Gemini Flash (main) handles research + PDF; Kimi K2.5 sub-agent handles Q&A generation (Step 3) and post-show critique (Step 6). Memory-efficient: no inline data, uses memory_search() on demand. Pre-built AI question answer included. Always invoke this skill before any podcast appearance.
+- **YouTube Transcription (2026-02-23):** Use `summarize "[YouTube URL]" --youtube auto --extract-only` — no API key needed, uses built-in captions. MP3-only audio requires Groq, OpenAI Whisper key, or local whisper.cpp (not yet installed).
 
 ## Pending Actions
 - **Sales POP! Podcast (Feb 24)**: ✅ COMPLETED. Host: John Golden (ex-CEO Huthwaite/SPIN Selling). Focus: "what does the salesperson do differently when they understand the Old Brain?" Est. release: ~March 17. Post-show critique pending recording link.
 - **Out of the Box with Christine Blosdale**: New opp received Feb 23. Paul replied offering March 17 at 8:30pm ET. Awaiting confirmation.
 - **Escaping the Drift critique**: recorded Feb 21. No post-show critique done yet — run when link available.
-- **LinkedIn post for Wed Feb 25**: Slot is open — next post (lp-024, postNumber 29) to draft.
+- **LinkedIn post for Wed Feb 25**: Slot is open — next post (lp-024, postNumber 29) to draft. (Update 2026-02-28: Post should position *The Divided Brain* as the 2026 update to legacy behavioral frameworks).
 - **Guests (Feb 25 - Mar 4)**: Barb and Jeff arriving Feb 25 at 11:15 AM (organized by Lawrence Larche).
 - **Email Flagged (Feb 24)**: Alice Mark (book practitioner question), 1Password (price update), CRA (new mail), Bell (e-bill), Brittany Wilson (RVH ED zone). Paul needs to review.
 - **Mission Control Team page UI**: In progress — rebuild `app/team/page.tsx` to show Trinity + Niobe as live cards with [Files] button.
@@ -141,25 +164,3 @@ When a system event arrives with text starting `TASK_REVIEW_REQUEST`:
 ## Paul's Frameworks
 - **MOCHA** — Customer experience flywheel (Make, Our, Customers, Happy, Always). Origin: radio/media career. Core goal: passionate customers who convert others. Full doc: `memory/reference/frameworks/mocha.md`. Connects directly to Divided Brain (H = Old Brain decides; New Brain rationalizes after). Good for sales/speaking contexts.
 - *More frameworks to be added as retrieved.*
-
-## Lessons Learned
-- **Memory Amnesia Fix (2026-02-22):** Root cause was flush triggering at 176k tokens (too late). Fixed via config + WORKFLOW_AUTO.md. If I redo completed work, check daily notes for "DO NOT redo" flags before acting.
-- **Dev Server Restart (2026-02-23):** Dev servers now managed by PM2 and survive gateway restarts automatically. PM2 also configured to auto-start on Mac reboot. No manual restart needed.
-- **Calendar Verification (2026-02-19):** Always verify live calendar via `gog` CLI rather than relying on cached briefs.
-- **Technical Fix (2026-02-19):** PATH stays resolved by explicitly pointing to `/opt/homebrew/Cellar/node@22/22.22.0/bin/node` for `gog` and node commands.
-- **LinkedIn Post Pipeline (2026-02-21):** Tracked in `memory/projects/linkedin-pipeline.csv` — always check before generating a new post.
-- **Gateway Crash Root Cause (2026-02-24):** `openclaw gateway restart` conflicts with LaunchD KeepAlive → lock-contention loop. Combined with invalid `sources` key in `memorySearch.experimental` causing config validation errors. Fix: always use `stop && sleep 2 && start`. Never use `openclaw gateway restart`.
-- **Config Backup System (2026-02-24):** Built timestamped backup + git-committed restore system. Run backup BEFORE any config change. Scripts in `workspace/scripts/`. Skill: `workspace/skills/config-safety/SKILL.md`. Emergency: `~/Desktop/RESTORE.txt`.
-- **sessionMemory Config (2026-02-24):** Added `agents.defaults.memorySearch.experimental.sessionMemory = true` to `openclaw.json`. Do NOT re-add. `compaction.memoryFlush.enabled` was already `true` — do NOT re-add.
-- **Branding Rules (2026-02-21):** Visual DNA in `memory/reference/divided-brain-branding.md`. Face silhouette always points LEFT; Large Gear = Old Brain (dominant); Small Gear = New Brain. Assets in Google Drive: `1eslLIjy1K25e4igHmILTNjRWGkg5G-zd`.
-- **Amazon Ads Configuration (2026-02-21):** Whitelisted redirect URI `https://paullarche.com`. 30-day audit revealed 2923% ACoS; surgical cuts applied. SOP: `skills/amazon-handshake-sop.md`.
-- **Book Sales Intelligence (2026-02-21):** Recurring subagent (every 3 days) researches Amazon algorithm trends for The Divided Brain.
-- **Apple Watch Shortcut (2026-02-21):** URL scheme to trigger OpenClaw: `https://t.me/plarche1Bot?text=[Input]`.
-- **API Key Rotation (2026-02-23):** When rotating a Google key, update BOTH `auth.json` AND `auth-profiles.json`. Only updating auth.json leaves the old (possibly revoked) key in auth-profiles.json, causing cooldown errors and slow/failed responses. Also clear `usageStats` in auth-profiles.json to remove any cooldown timers from the old key.
-- **Key Security (2026-02-23):** NEVER output API keys in chat responses — not even to confirm they were updated. Google scanners detect keys in chat and auto-revoke them within minutes. Always say "Key is live" with no key characters visible.
-- **Podcast Delivery (2026-02-23):** WholeCEO/Lisa G critique — filler words (~65 per 20 min), stumbled on own book title at close (said it 3x), "Hawkins razor" error (it's Occam's razor), "private parts" framing awkward (use "status/ego"). All standing rules now in `skills/podcast-prep-master.md` — do not re-document per episode.
-- **Podcast Prep Skill (2026-02-23):** `skills/podcast-prep-master.md` rebuilt as full 6-step workflow. Model routing baked in: Gemini Flash (main) handles research + PDF; Kimi K2.5 sub-agent handles Q&A generation (Step 3) and post-show critique (Step 6). Memory-efficient: no inline data, uses memory_search() on demand. Pre-built AI question answer included. Always invoke this skill before any podcast appearance.
-- **YouTube Transcription (2026-02-23):** Use `summarize "[YouTube URL]" --youtube auto --extract-only` — no API key needed, uses built-in captions. MP3-only audio requires Groq, OpenAI Whisper key, or local whisper.cpp (not yet installed).
-- **Gateway Crash Root Cause (2026-02-24):** `openclaw gateway restart` conflicts with LaunchD KeepAlive → lock-contention loop. Combined with invalid `sources` key in `memorySearch.experimental` causing config validation errors. Fix: always use `stop && sleep 2 && start`. Never use `openclaw gateway restart`.
-- **Config Backup System (2026-02-24):** Built timestamped backup + git-committed restore system. Run backup BEFORE any config change. Scripts in `workspace/scripts/`. Skill: `workspace/skills/config-safety/SKILL.md`. Emergency: `~/Desktop/RESTORE.txt`.
-- **sessionMemory Config (2026-02-24):** Added `agents.defaults.memorySearch.experimental.sessionMemory = true` to `openclaw.json`. Do NOT re-add. `compaction.memoryFlush.enabled` was already `true` — do NOT re-add.

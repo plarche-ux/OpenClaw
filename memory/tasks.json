@@ -86,7 +86,7 @@
       "id": "t-002",
       "title": "Fix Brand Value Canvas sidebar bleed",
       "description": "Add overflow-hidden to sidebar wrapper divs at lines 242, 285, 307, 329 in Canvas.tsx",
-      "status": "done",
+      "status": "in_progress",
       "priority": "medium",
       "project": "brand-value-canvas",
       "assignee": "link",
@@ -201,7 +201,7 @@
       "id": "t-010",
       "title": "Full paullarche.com site audit + rebuild plan",
       "description": "6 marketing gaps already identified. Paul open to full rebuild. Run subagent audit (Gemini 3.1).",
-      "status": "done",
+      "status": "todo",
       "priority": "medium",
       "project": "website",
       "assignee": "niobe",
@@ -315,6 +315,155 @@
       ],
       "createdAt": "2026-02-27T16:27:51.374Z",
       "updatedAt": "2026-02-27T16:27:51.375Z"
+    },
+    {
+      "id": "t-018",
+      "title": "KDP Optimization: Category Pivot",
+      "description": "Add 'Medical Books > Psychology > Neuropsychology' and 'Business & Money > Skills > Decision Making' categories via KDP support.",
+      "status": "todo",
+      "priority": "high",
+      "project": "book-promotion",
+      "assignee": "trinity",
+      "tags": [
+        "kdp",
+        "optimization"
+      ],
+      "createdAt": "2026-02-28T14:42:00Z",
+      "updatedAt": "2026-02-28T14:42:00Z"
+    },
+    {
+      "id": "t-019",
+      "title": "KDP Optimization: Keyword Refresh",
+      "description": "Update 7 backend keyword slots with high-intent strings identified by Niobe (habit loop, neuroscience business, etc.).",
+      "status": "todo",
+      "priority": "high",
+      "project": "book-promotion",
+      "assignee": "trinity",
+      "tags": [
+        "kdp",
+        "optimization"
+      ],
+      "createdAt": "2026-02-28T14:42:00Z",
+      "updatedAt": "2026-02-28T14:42:00Z"
+    },
+    {
+      "id": "t-020",
+      "title": "Draft LinkedIn 'External Signal' post",
+      "description": "Create a high-impact post to drive direct Amazon traffic (A10 algorithm signal) targeting Habit Loop/Cognitive Bias.",
+      "status": "todo",
+      "priority": "high",
+      "project": "book-promotion",
+      "assignee": "trinity",
+      "tags": [
+        "linkedin",
+        "a10"
+      ],
+      "createdAt": "2026-02-28T14:42:00Z",
+      "updatedAt": "2026-02-28T14:42:00Z"
+    },
+    {
+      "id": "t-021",
+      "title": "Submit BookBub Featured Deal (Q1 Window)",
+      "description": "Apply for a late March Featured Deal at $0.99-$1.99 promo pricing. Needs 4 week lead time.",
+      "status": "todo",
+      "priority": "medium",
+      "project": "book-promotion",
+      "assignee": "trinity",
+      "tags": [
+        "promotion",
+        "bookbub"
+      ],
+      "createdAt": "2026-02-28T14:42:00Z",
+      "updatedAt": "2026-02-28T14:42:00Z"
+    },
+    {
+      "id": "t-011",
+      "title": "Draft next LinkedIn post (Endowment Effect or Reciprocity)",
+      "description": "Next slot is Saturday. Need Trinity to draft it.",
+      "status": "in_progress",
+      "priority": "high",
+      "project": "book-promotion",
+      "assignee": "trinity",
+      "tags": [
+        "linkedin"
+      ],
+      "createdAt": "2026-02-28T14:43:14.817Z",
+      "updatedAt": "2026-02-28T14:43:14.818Z"
+    },
+    {
+      "id": "t-012",
+      "title": "Post-show critique: Escaping the Drift podcast",
+      "description": "Run the post-show critique for the Escaping the Drift appearance recorded on Feb 21.",
+      "status": "todo",
+      "priority": "medium",
+      "project": "book-promotion",
+      "assignee": "trinity",
+      "tags": [
+        "podcast",
+        "speaking"
+      ],
+      "createdAt": "2026-02-28T14:43:14.818Z",
+      "updatedAt": "2026-02-28T14:43:14.818Z"
+    },
+    {
+      "id": "t-013",
+      "title": "Build Mission Control Team page UI",
+      "description": "Rebuild app/team/page.tsx to show Trinity + Niobe as live cards with [Files] button.",
+      "status": "todo",
+      "priority": "medium",
+      "project": "mission-control",
+      "assignee": "link",
+      "tags": [
+        "coding",
+        "ui"
+      ],
+      "createdAt": "2026-02-28T14:43:14.818Z",
+      "updatedAt": "2026-02-28T14:43:14.818Z"
+    },
+    {
+      "id": "t-014",
+      "title": "Build Mission Control Podcasts page",
+      "description": "app/podcasts/page.tsx NOT built; API route and nav item needed.",
+      "status": "todo",
+      "priority": "medium",
+      "project": "mission-control",
+      "assignee": "link",
+      "tags": [
+        "coding",
+        "ui"
+      ],
+      "createdAt": "2026-02-28T14:43:14.818Z",
+      "updatedAt": "2026-02-28T14:43:14.818Z"
+    },
+    {
+      "id": "t-015",
+      "title": "Research: Out of the Box with Christine Blosdale",
+      "description": "New podcast opp received Feb 23. Research host and show to help Paul reply.",
+      "status": "todo",
+      "priority": "high",
+      "project": "book-promotion",
+      "assignee": "niobe",
+      "tags": [
+        "research",
+        "podcast"
+      ],
+      "createdAt": "2026-02-28T14:43:14.818Z",
+      "updatedAt": "2026-02-28T14:43:14.818Z"
+    },
+    {
+      "id": "t-016",
+      "title": "Barrie Cares: Open Action Items",
+      "description": "Provide org letterhead, John Alousis letter, Jammin' for Barrie status, Thurston College brainstorming.",
+      "status": "todo",
+      "priority": "high",
+      "project": "barrie-cares",
+      "assignee": "paul",
+      "tags": [
+        "board",
+        "admin"
+      ],
+      "createdAt": "2026-02-28T14:43:14.818Z",
+      "updatedAt": "2026-02-28T14:43:14.818Z"
     }
   ]
 }
