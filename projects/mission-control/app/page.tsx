@@ -10,6 +10,7 @@ import {
 interface SystemInfo {
   mdCount: number
   nodeVersion: string
+  openclawVersion: string
   uptime: number
   workspacePath: string
   now: string
@@ -67,10 +68,10 @@ export default function Dashboard() {
         </div>
         <div className="bg-slate-50 rounded-xl border border-slate-200 p-5 hover:border-blue-400 transition-all">
           <div className="flex items-center gap-2 text-slate-500 text-xs uppercase tracking-wide mb-1">
-            <Zap size={14} /> Node Version
+            <Zap size={14} /> OpenClaw Version
           </div>
-          <div className="text-3xl font-bold text-slate-900 font-mono">{info?.nodeVersion ?? '—'}</div>
-          <div className="text-xs text-slate-500 mt-1">runtime</div>
+          <div className="text-3xl font-bold text-slate-900 font-mono">v{info?.openclawVersion ?? '—'}</div>
+          <div className="text-xs text-slate-500 mt-1">running on node {info?.nodeVersion ?? '—'}</div>
         </div>
       </div>
 

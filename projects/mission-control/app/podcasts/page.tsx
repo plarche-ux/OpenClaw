@@ -447,11 +447,12 @@ export default function PodcastsPage() {
                             View Briefing
                           </button>
                         )}
-                        {!show.briefingMd && show.briefingPdf && (
+                        {show.briefingPdf && (
                           <a
                             href={`/api/files?path=${encodeURIComponent(show.briefingPdf)}`}
                             className="flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-lg border border-slate-200 text-slate-800 hover:border-blue-500/50 hover:text-blue-600 transition-all bg-slate-50"
                             onClick={e => e.stopPropagation()}
+                            download
                           >
                             <FileText size={12} />
                             Download PDF

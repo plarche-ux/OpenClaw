@@ -31,7 +31,7 @@ echo "✅ Backup created (Sanitized): $BACKUP_FILE"
 
 # --- Commit ---
 cd "$WORKSPACE"
-git add "backups/openclaw.json.$TIMESTAMP"
+git add -f "backups/openclaw.json.$TIMESTAMP"
 git commit -m "config backup: pre-change snapshot $TIMESTAMP (sanitized)" --quiet
 echo "✅ Committed to workspace git: config backup $TIMESTAMP"
 echo ""

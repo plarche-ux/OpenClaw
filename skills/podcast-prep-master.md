@@ -160,11 +160,11 @@ EOF
 
 2. **Update `memory/podcasts.json`** — set `briefingMd` field to `"memory/projects/book-promotion/podcasts/briefing-[SHOW]-[DATE].md"` for the matching show.
 
-3. **PDF is optional** — only generate if Paul specifically requests it. The `.md` version is readable on screen in Mission Control and doesn't need an extra app.
+3. **PDF is MANDATORY** — Always generate the PDF after saving the .md file. Paul prefers having the PDF as a portable backup. Use the standard `md-to-pdf [file.md]` command (which outputs `file.pdf` in the same directory).
 
-4. **Delete after show** — briefing files are ephemeral. After the post-show critique is done, remove them to keep the workspace clean.
+4. **Delete after critique** — Briefing files are ephemeral. After the post-show critique is done, remove both .md and .pdf files to keep the workspace clean.
 
-Tell Paul to go to Mission Control → Podcasts → expand the show card → click "View Briefing".
+Tell Paul to go to Mission Control → Podcasts → expand the show card → click "View Briefing" or "Download PDF".
 
 **Briefing template (fill in per show):**
 
