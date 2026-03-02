@@ -18,7 +18,7 @@
 - **⚠️ Gateway reload:** Do NOT use `kill -HUP`, `launchctl bootout`, or `openclaw gateway restart`. Safe sequence: `openclaw gateway stop && sleep 2 && openclaw gateway start`. `com.openclaw.backup` LaunchAgent removed.
 - **⚠️ Config Change Safety (MANDATORY):** ALWAYS run `~/.openclaw/workspace/scripts/backup-openclaw-config.sh` BEFORE editing `openclaw.json` or restarting the gateway. Emergency restore instructions: `~/Desktop/RESTORE.txt`. Backups stored in `workspace/backups/` committed to workspace git.
 - **System Hardening (2026-02-24):** `openclaw doctor --fix` and `openclaw security audit --fix` run. Canonicalized session keys, set file permissions to 600, and removed invalid `sources` key from `memorySearch.experimental`.
-- **Auto-Update (2026-02-28):** OpenClaw updated to `v2026.2.26`. Features include `openclaw secrets` workflow and Android node support (device status/notifications).
+- **Auto-Update (2026-03-02):** OpenClaw updated to `v2026.2.26`. Features include `openclaw secrets` workflow and Android node support (device status/notifications).
 - **Heartbeat Cycles (2026-02-24):** QMD sync + embed confirmed working every cycle.
 - **Infrastructure Status (2026-02-24):** PM2 managing `brand-value-canvas` (:3000) and `mission-control` (:3001).
 - Remote access: Jump Desktop (primary)
@@ -35,6 +35,7 @@
     - Categories: Expand to "Medical Books > Psychology" and "Business & Money > Skills > Decision Making."
     - Keywords: Add `habit loop`, `neuroscience business`, `cognitive bias sales`, `why people buy`.
     - Pricing: Target $16.99 (positioning between James Clear and Robert Cialdini).
+    - Strategy: Prioritize external traffic links (LinkedIn/Podcasts) to Amazon to boost A10 authority.
 
 ## Infrastructure
 - **PM2:** Installed globally. Manages Brand Value Canvas (:3000) and Mission Control (:3001) dev servers. Configured to auto-start on Mac reboot. Commands: `pm2 list`, `pm2 logs <name>`, `pm2 restart <name>`.
@@ -127,9 +128,10 @@ When a system event arrives with text starting `TASK_REVIEW_REQUEST`:
 
 ## Pending Actions
 - **Sales POP! Podcast (Feb 24)**: ✅ COMPLETED. Host: John Golden (ex-CEO Huthwaite/SPIN Selling). Focus: "what does the salesperson do differently when they understand the Old Brain?" Est. release: ~March 17. Post-show critique pending recording link.
+- **Travis Makes Money Podcast (Mar 2)**: Scheduled for today.
 - **Out of the Box with Christine Blosdale**: New opp received Feb 23. Paul replied offering March 17 at 8:30pm ET. Awaiting confirmation.
 - **Escaping the Drift critique**: recorded Feb 21. No post-show critique done yet — run when link available.
-- **LinkedIn post for Wed Feb 25**: Slot is open — next post (lp-024, postNumber 29) to draft. (Update 2026-02-28: Post should position *The Divided Brain* as the 2026 update to legacy behavioral frameworks).
+- **LinkedIn post for Wed Mar 4**: Next open slot. (Update 2026-02-28: Post should position *The Divided Brain* as the 2026 update to legacy behavioral frameworks).
 - **Guests (Feb 25 - Mar 4)**: Barb and Jeff arriving Feb 25 at 11:15 AM (organized by Lawrence Larche).
 - **Email Flagged (Feb 24)**: Alice Mark (book practitioner question), 1Password (price update), CRA (new mail), Bell (e-bill), Brittany Wilson (RVH ED zone). Paul needs to review.
 - **Mission Control Team page UI**: In progress — rebuild `app/team/page.tsx` to show Trinity + Niobe as live cards with [Files] button.

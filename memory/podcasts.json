@@ -85,7 +85,16 @@
       "sessionLink": "",
       "publicist": "Jimmy Dwyer — jimmy@dalynmillerpr.com — 703-772-1495",
       "briefingPdf": "",
-      "anticipatedQuestions": [],
+      "briefingMd": "memory/projects/book-promotion/podcasts/briefing-travis-makes-money-2026-03-02.md",
+      "anticipatedQuestions": [
+        "How can understanding the brain help entrepreneurs actually make more money?",
+        "Why do customers sometimes reject great offers that make perfect logical sense?",
+        "What is the biggest mistake entrepreneurs make when trying to persuade customers?",
+        "How do you build trust with customers in a world where everyone is skeptical?",
+        "What about buyer resistance and objection handling?",
+        "What does behavioral psychology teach us about pricing and fairness?",
+        "How can entrepreneurs train themselves to make better decisions under pressure?"
+      ],
       "cheatSheet": {
         "bookClose": "It's called The Divided Brain — available on Amazon and at paullarche.com.",
         "aiAnswer": "The human advantage is authentic emotional connection. AI can optimize for conversion, but it can't sit across the table and make someone feel genuinely understood. That's still a human skill.",
