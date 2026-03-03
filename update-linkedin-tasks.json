@@ -1,0 +1,20 @@
+[
+  {
+    "id": "li-header-update",
+    "title": "Update LinkedIn Header Image",
+    "description": "Design or modify the LinkedIn banner to include the Canreads 2026 Finalist badge and BookLife Prize (10/10) branding. Ensure it follows the Visual DNA (head facing left, gears, high contrast).",
+    "project": "Book Promotion",
+    "priority": "high",
+    "status": "backlog",
+    "assignee": "Neo"
+  },
+  {
+    "id": "li-page-audit",
+    "title": "LinkedIn Page Branding Audit",
+    "description": "Review the current LinkedIn page profile, tagline, and 'About' section to ensure they align with 'The Divided Brain' branding and mention recent awards (Canreads/BookLife).",
+    "project": "Book Promotion",
+    "priority": "medium",
+    "status": "backlog",
+    "assignee": "Neo"
+  }
+]

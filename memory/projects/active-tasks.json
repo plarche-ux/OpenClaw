@@ -1,0 +1,40 @@
+{
+  "tasks": [
+    {
+      "id": "task-001",
+      "title": "LinkedIn Branding Fix",
+      "description": "Update header and bio to 'Cialdini meets Neuroscience' branding.",
+      "status": "pending",
+      "priority": "high",
+      "assignee": "Paul",
+      "project": "Personal Branding"
+    },
+    {
+      "id": "task-002",
+      "title": "Amazon Ads Audit",
+      "description": "Full review of Feb 21/22 changes now that lag has cleared.",
+      "status": "pending",
+      "priority": "high",
+      "assignee": "Oracle",
+      "project": "Book Promotion"
+    },
+    {
+      "id": "task-003",
+      "title": "Barrie Cares Letterhead",
+      "description": "Provide org letterhead and put John Alousis's letter on it.",
+      "status": "done",
+      "priority": "high",
+      "assignee": "Paul",
+      "project": "Barrie Cares"
+    },
+    {
+      "id": "task-004",
+      "title": "Podcast Critique",
+      "description": "Run post-show critique for 'Travis Makes Money'.",
+      "status": "pending",
+      "priority": "medium",
+      "assignee": "Trinity",
+      "project": "Book Promotion"
+    }
+  ]
+}

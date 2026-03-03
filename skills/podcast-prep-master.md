@@ -115,7 +115,10 @@ For each likely question, Kimi should produce a **Scene → Insight → Book tie
 - Personal (memorized): 25 guitars, Rolex, lion in the bush, 5 radio stations from scratch
 
 **Pre-built answer — the AI/human advantage question** (use verbatim or close):
-> *"The human advantage is authentic emotional connection. AI can optimize for conversion, but it can't sit across the table from someone and make them feel genuinely understood. That's still a human skill. The brands that win in an AI world use AI for efficiency and reserve their human energy for trust-building."*
+> *"AI isn't changing the way we think—it's just getting better at exploiting how we've always thought. It targets the Old Brain—the part of us that seeks safety and status—with surgical precision. The real change is that we now have systems built for speed, while our best decisions require reflection. The brands that win in an AI world use AI for efficiency and reserve their human energy for trust-building."*
+
+**The "Clutch" (Metacognition) - Tactical advice for AI:**
+*Metacognition is the "clutch" that allows you to shift gears from the fast, reactive Old Brain to the slow, reflective New Brain. When you feel a spike of urgency or emotion from a marketing message (or an AI-driven alert), that's the signal to "press in the clutch."*
 
 **Credibility to drop early (first 3 min):**
 - BookLife Prize: 10/10 score, Editor's Pick 2025 — from Publisher's Weekly. Rare.
@@ -160,7 +163,7 @@ EOF
 
 2. **Update `memory/podcasts.json`** — set `briefingMd` field to `"memory/projects/book-promotion/podcasts/briefing-[SHOW]-[DATE].md"` for the matching show.
 
-3. **PDF is MANDATORY** — Always generate the PDF after saving the .md file. Paul prefers having the PDF as a portable backup. Use the standard `md-to-pdf [file.md]` command (which outputs `file.pdf` in the same directory).
+3. **PDF is MANDATORY** — Always generate the PDF after saving the .md file. Paul prefers having the PDF as a portable backup. Use the `md-to-pdf [file.md]` command to generate it correctly.
 
 4. **Delete after critique** — Briefing files are ephemeral. After the post-show critique is done, remove both .md and .pdf files to keep the workspace clean.
 
@@ -199,9 +202,18 @@ Tell Paul to go to Mission Control → Podcasts → expand the show card → cli
 ---
 
 ## AI Question (use verbatim)
-"The human advantage is authentic emotional connection. AI can optimize for
-conversion, but it can't sit across the table from someone and make them feel
-genuinely understood. That's still a human skill..."
+"AI isn't changing the way we think—it's just getting better at exploiting how 
+we've always thought. It targets the Old Brain—the part of us that seeks safety 
+and status—with surgical precision. The real change is that we now have systems 
+built for speed, while our best decisions require reflection. The brands that 
+win in an AI world use AI for efficiency and reserve their human energy for 
+trust-building."
+
+## The "Clutch" (Metacognition)
+"Metacognition is the 'clutch' that allows you to shift gears from the fast, 
+reactive Old Brain to the slow, reflective New Brain. When you feel a spike of 
+urgency or emotion from a marketing message (or an AI-driven alert), that's the 
+signal to 'press in the clutch.'"
 
 ---
 
